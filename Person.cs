@@ -26,7 +26,7 @@ namespace DoAnOOP
 
         public abstract string searchBook();
 
-        public Person(string nameValue, int numberValue, string addressValue)
+        public Person(string nameValue, int numberValue, string addressValue, int idValue)
         {
             throw new System.NotImplementedException();
         }
