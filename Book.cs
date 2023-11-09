@@ -14,13 +14,13 @@ namespace DoAnOOP
 
         public Book(string nameValue, int bookCodeValue, string authorValue, Date_ dateValue)
         {
-            throw new System.NotImplementedException();
+            Name = nameValue;
+            BookCode = bookCodeValue;
+            Author = authorValue;
+            Date = dateValue;
         }
 
-        public Book()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Book(){}
 
         public string Name { get => name; set => name = value; }
         public int BookCode { get => bookCode; set => bookCode = value; }
@@ -29,7 +29,7 @@ namespace DoAnOOP
 
         public string bookDetail()
         {
-            throw new System.NotImplementedException();
+            return "BookCode: " + BookCode + " Name: " + Name + " Author: " + Author + Date.toDateString();
         }
     }
 }

@@ -15,12 +15,7 @@ namespace DoAnOOP
         public string Name { get => name; set => name = value; }
         public int NumberContact { get => numberContact; set => numberContact = value; }
         public string Address { get => address; set => address = value; }
-
-        public int Id
-        {
-            get => id;
-            set => id = value;
-        }
+        public int Id { get => id; set => id = value; }
 
         public abstract string pritfDetail();
 
@@ -28,12 +23,12 @@ namespace DoAnOOP
 
         public Person(string nameValue, int numberValue, string addressValue, int idValue)
         {
-            throw new System.NotImplementedException();
+            Name= nameValue;
+            NumberContact = numberValue;
+            Address = addressValue;
+            Id = idValue;
         }
 
-        public Person()
-        {
-            throw new System.NotImplementedException();
-        }
+        public Person() {}
     }
 }
