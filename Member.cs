@@ -14,7 +14,7 @@ namespace DoAnOOP
             throw new NotImplementedException();
         }
 
-        public override string pritfDetail()
+        public override string printfDetail()
         {
             throw new NotImplementedException();
         }
