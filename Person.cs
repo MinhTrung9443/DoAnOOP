@@ -17,7 +17,7 @@ namespace DoAnOOP
         public string Address { get => address; set => address = value; }
         public int Id { get => id; set => id = value; }
 
-        public abstract string pritfDetail();
+        public abstract string printfDetail();
 
         public abstract string searchBook();
 

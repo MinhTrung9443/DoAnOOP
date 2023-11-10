@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace DoAnOOP
@@ -9,19 +10,24 @@ namespace DoAnOOP
     {
         public Librarian() { }
         public Librarian(string nameValue, int numberValue, string addressValue, int idValue) : base(nameValue, numberValue, addressValue, idValue) { }
-        public void addBook()
+        public void addBook(List<Book> books, Book a)
         {
-            throw new NotImplementedException();
+            books.Add(a);
         }
 
-        public void generateReport()
+        public string generateReport(List<Book> books)
         {
-            throw new NotImplementedException();
+            string tam = string.Empty;
+            foreach (var item in books)
+            {
+                tam += item.bookDetail()+ "\n";
+            }
+            return tam;
         }
 
-        public override string pritfDetail()
+        public override string printfDetail()
         {
-            throw new NotImplementedException();
+            return "Name: " + Name + " Number contact: " + NumberContact + " Address: " + Address + " ID: " + Id+ "\n";
         }
 
         public override string searchBook()

@@ -12,9 +12,11 @@ namespace DoAnOOP
 {
     public partial class Form1 : Form
     {
+        List<Book> books = new List<Book>();    
         public Form1()
         {
             InitializeComponent();
         }
+
     }
 }
