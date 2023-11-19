@@ -12,7 +12,10 @@ namespace DoAnOOP
 {
     public partial class Form1 : Form
     {
-        List<Book> books = new List<Book>();    
+        qlyBook sach = new qlyBook();
+        qlyMember members = new qlyMember();
+        database_DoAnDataContext db = new database_DoAnDataContext();
+
         public Form1()
         {
             InitializeComponent();

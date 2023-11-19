@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DoAnOOP.Person">
-    <Position X="5" Y="1.25" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAACAAAAAAAAAAAABAQAAAIEgAACAIAAAAAAAgA=</HashCode>
+      <HashCode>AAACAAACAAAAAAAAAAAAAAQAAAIEgIACAIAAAAAAAgA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DoAnOOP.Librarian">
-    <Position X="7" Y="1.5" Width="1.5" />
+    <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACACAAIAAAABAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACACAAIAAAABAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Librarian.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DoAnOOP.Member">
-    <Position X="2.75" Y="1.5" Width="1.5" />
+    <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAABAAAAAAAAAAAAAAAABQAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAABQAAAA=</HashCode>
       <FileName>Member.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DoAnOOP.Book">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAgAAAAIQAAAAEAAABAAAAAQIAABA=</HashCode>
       <FileName>Book.cs</FileName>
