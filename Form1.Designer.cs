@@ -149,7 +149,7 @@
             this.grBox_mem.Controls.Add(this.btn_search_member);
             this.grBox_mem.Controls.Add(this.btn_return);
             this.grBox_mem.Controls.Add(this.btn_issue);
-            this.grBox_mem.Location = new System.Drawing.Point(405, 229);
+            this.grBox_mem.Location = new System.Drawing.Point(838, 238);
             this.grBox_mem.Name = "grBox_mem";
             this.grBox_mem.Size = new System.Drawing.Size(414, 317);
             this.grBox_mem.TabIndex = 10;

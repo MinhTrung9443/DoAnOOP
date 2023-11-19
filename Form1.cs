@@ -17,6 +17,7 @@ namespace DoAnOOP
         database_DoAnDataContext db = new database_DoAnDataContext();
         List<Book> books = new List<Book>();
         List<Member> members = new List<Member>();
+        Member mem = new Member();
         public Form1()
         {
             InitializeComponent();
@@ -145,6 +146,7 @@ namespace DoAnOOP
             if (a.CompareTo("Admin") == 0 && b.CompareTo("123456") == 0)
             {
                 grBox_libra.Visible = true;
+                grBox_mem.Visible = false;
                 lbl_hienThi.Text = "Quan tri vien";
                 lbl_hienThi.Visible = true;
             }
@@ -169,6 +171,9 @@ namespace DoAnOOP
 
         private void btn_member_Click(object sender, EventArgs e)
         {
+            lbl_hienThi.Text = "Nguoi dung " + mem.ToString();
+            lbl_hienThi.Visible = true;
+            grBox_libra.Visible = false;
             grBox_mem.Visible = true;
         }
     }
