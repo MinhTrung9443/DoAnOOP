@@ -20,6 +20,9 @@ namespace DoAnOOP
         public Form1()
         {
             InitializeComponent();
+        }
+        private void input()
+        {
             var list = (from s in db.qlyBooks select s).ToList();
             foreach (var item in list)
             {
@@ -42,11 +45,72 @@ namespace DoAnOOP
                 members.Add(b);
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'do_an_oopDataSet.Book' table. You can move, or remove it, as needed.
+            this.do_an_oopDataSet.Tables.Clear();
             this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
+            var list = (from s in db.qlyBooks select s).ToList();
+            dataGridView1.DataSource = list;
+            input();
+        }
+        private void add(Book a, object sender, EventArgs e)
+        {
+            try
+            {
+                int i = 0;
+                for (i = 0; i < books.Count; i++)
+                {
+                    if (books[i].BookCode == a.BookCode && books[i].Author.CompareTo(a.Author) == 1)
+                    {
+                        a.Number = books[i].Number + 1;
+                        book.Author = a.Author;
+                        book.Date = a.Date;
+                        book.BookCode = a.BookCode;
+                        book.BookName = a.Name;
+                        book.Number = a.Number;
+                        db.SubmitChanges();
+                        break;
+                    }
+                    if (books[i].BookCode == a.BookCode)
+                    {
+                        MessageBox.Show("Ma sach da ton tai. Moi nhap lai thong tin sach!");
+                        break;
+                    }
+                }
+                if (i == books.Count)
+                {
+                    MessageBox.Show(a.bookDetail());
+                    book.Author = a.Author;
+                    book.Date = a.Date;
+                    book.BookCode = a.BookCode;
+                    book.BookName = a.Name;
+                    book.Number = 0;
+                    db.qlyBooks.InsertOnSubmit(book);
+                    db.SubmitChanges();
+                }
+                Form1_Load(sender, e);
+            }
+            catch
+            {
+                MessageBox.Show("Loi dang trong qua trinh fix.");
+            }
+        }
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            Form2 a = new Form2();
+            a.truyen = new Form2.truyenDuLieu(add);
+            a.ShowDialog();
+        }
+
+        private void btn_viewMember_Click(object sender, EventArgs e)
+        {
+            string a = "";
+            for (int i = 0;i<members.Count;i++)
+            {
+                a += members[i].printfDetail();
+            }
+            MessageBox.Show(a);
         }
     }
 }

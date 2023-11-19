@@ -34,28 +34,28 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_viewMember = new System.Windows.Forms.Button();
             this.btn_report = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_search_librarian = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_search_member = new System.Windows.Forms.Button();
+            this.btn_return = new System.Windows.Forms.Button();
+            this.btn_issue = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.bookCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
+            this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_member
@@ -84,6 +84,7 @@
             this.btn_add.TabIndex = 2;
             this.btn_add.Text = "Add Book";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_viewMember
             // 
@@ -93,6 +94,7 @@
             this.btn_viewMember.TabIndex = 3;
             this.btn_viewMember.Text = "View member";
             this.btn_viewMember.UseVisualStyleBackColor = true;
+            this.btn_viewMember.Click += new System.EventHandler(this.btn_viewMember_Click);
             // 
             // btn_report
             // 
@@ -103,14 +105,14 @@
             this.btn_report.Text = "Report";
             this.btn_report.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_search_librarian
             // 
-            this.button6.Location = new System.Drawing.Point(171, 218);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(117, 46);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Search";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_search_librarian.Location = new System.Drawing.Point(171, 218);
+            this.btn_search_librarian.Name = "btn_search_librarian";
+            this.btn_search_librarian.Size = new System.Drawing.Size(117, 46);
+            this.btn_search_librarian.TabIndex = 5;
+            this.btn_search_librarian.Text = "Search";
+            this.btn_search_librarian.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -127,8 +129,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.btn_search_librarian);
             this.groupBox2.Controls.Add(this.btn_report);
             this.groupBox2.Controls.Add(this.btn_viewMember);
             this.groupBox2.Controls.Add(this.btn_add);
@@ -140,42 +141,42 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(6, 72);
+            this.groupBox3.Controls.Add(this.btn_search_member);
+            this.groupBox3.Controls.Add(this.btn_return);
+            this.groupBox3.Controls.Add(this.btn_issue);
+            this.groupBox3.Location = new System.Drawing.Point(472, 290);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(414, 317);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // button1
+            // btn_search_member
             // 
-            this.button1.Location = new System.Drawing.Point(133, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_search_member.Location = new System.Drawing.Point(133, 180);
+            this.btn_search_member.Name = "btn_search_member";
+            this.btn_search_member.Size = new System.Drawing.Size(117, 46);
+            this.btn_search_member.TabIndex = 9;
+            this.btn_search_member.Text = "Search";
+            this.btn_search_member.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_return
             // 
-            this.button3.Location = new System.Drawing.Point(214, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 46);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "View member";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_return.Location = new System.Drawing.Point(214, 49);
+            this.btn_return.Name = "btn_return";
+            this.btn_return.Size = new System.Drawing.Size(117, 46);
+            this.btn_return.TabIndex = 7;
+            this.btn_return.Text = "Return Book";
+            this.btn_return.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_issue
             // 
-            this.button4.Location = new System.Drawing.Point(50, 49);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 46);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Add Book";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_issue.Location = new System.Drawing.Point(50, 49);
+            this.btn_issue.Name = "btn_issue";
+            this.btn_issue.Size = new System.Drawing.Size(117, 46);
+            this.btn_issue.TabIndex = 6;
+            this.btn_issue.Text = "Issue Book";
+            this.btn_issue.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -194,20 +195,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(758, 568);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // do_an_oopDataSet
-            // 
-            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
-            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.do_an_oopDataSet;
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
             // 
             // bookCodeDataGridViewTextBoxColumn
             // 
@@ -249,11 +236,26 @@
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
             this.numberDataGridViewTextBoxColumn.Width = 125;
             // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "Book";
+            this.bookBindingSource.DataSource = this.do_an_oopDataSet;
+            // 
+            // do_an_oopDataSet
+            // 
+            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
+            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 629);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -264,8 +266,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,12 +279,12 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_viewMember;
         private System.Windows.Forms.Button btn_report;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_search_librarian;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_search_member;
+        private System.Windows.Forms.Button btn_return;
+        private System.Windows.Forms.Button btn_issue;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Do_an_oopDataSet do_an_oopDataSet;

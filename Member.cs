@@ -16,7 +16,7 @@ namespace DoAnOOP
 
         public override string printfDetail()
         {
-            throw new NotImplementedException();
+            return "Id: " + Id + " Name: " + Name + " Address: " + Address + " Number: " + NumberContact;
         }
 
         public void returnBook()
