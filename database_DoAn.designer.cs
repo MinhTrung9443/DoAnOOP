@@ -91,7 +91,7 @@ namespace DoAnOOP
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _BoodCode;
+		private int _BookCode;
 		
 		private string _BookName;
 		
@@ -99,18 +99,22 @@ namespace DoAnOOP
 		
 		private System.Nullable<System.DateTime> _Date;
 		
+		private System.Nullable<int> _Number;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnBoodCodeChanging(int value);
-    partial void OnBoodCodeChanged();
+    partial void OnBookCodeChanging(int value);
+    partial void OnBookCodeChanged();
     partial void OnBookNameChanging(string value);
     partial void OnBookNameChanged();
     partial void OnAuthorChanging(string value);
     partial void OnAuthorChanged();
     partial void OnDateChanging(System.Nullable<System.DateTime> value);
     partial void OnDateChanged();
+    partial void OnNumberChanging(System.Nullable<int> value);
+    partial void OnNumberChanged();
     #endregion
 		
 		public qlyBook()
@@ -118,22 +122,22 @@ namespace DoAnOOP
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BoodCode", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int BoodCode
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookCode", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int BookCode
 		{
 			get
 			{
-				return this._BoodCode;
+				return this._BookCode;
 			}
 			set
 			{
-				if ((this._BoodCode != value))
+				if ((this._BookCode != value))
 				{
-					this.OnBoodCodeChanging(value);
+					this.OnBookCodeChanging(value);
 					this.SendPropertyChanging();
-					this._BoodCode = value;
-					this.SendPropertyChanged("BoodCode");
-					this.OnBoodCodeChanged();
+					this._BookCode = value;
+					this.SendPropertyChanged("BookCode");
+					this.OnBookCodeChanged();
 				}
 			}
 		}
@@ -178,7 +182,7 @@ namespace DoAnOOP
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date")]
 		public System.Nullable<System.DateTime> Date
 		{
 			get
@@ -194,6 +198,26 @@ namespace DoAnOOP
 					this._Date = value;
 					this.SendPropertyChanged("Date");
 					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="Int")]
+		public System.Nullable<int> Number
+		{
+			get
+			{
+				return this._Number;
+			}
+			set
+			{
+				if ((this._Number != value))
+				{
+					this.OnNumberChanging(value);
+					this.SendPropertyChanging();
+					this._Number = value;
+					this.SendPropertyChanged("Number");
+					this.OnNumberChanged();
 				}
 			}
 		}

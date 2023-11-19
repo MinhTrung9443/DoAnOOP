@@ -1,1 +1,18 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="database_DoAn">
+  <DataContextMoniker Name="/database_DoAnDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cce1b5da-8397-45df-aaa8-25df1fca9540" absoluteBounds="3.125, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/database_DoAnDataContext/qlyBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c02cb4ab-f444-4c28-8b9f-9293969bdba7" absoluteBounds="3.14, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a54ea737-05fe-4c5b-bee7-9959cdce0f7b" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/database_DoAnDataContext/qlyMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="314318d1-1aad-4e80-b112-520c87b3df23" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
