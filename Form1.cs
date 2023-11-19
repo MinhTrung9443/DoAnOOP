@@ -61,18 +61,14 @@ namespace DoAnOOP
                 int i = 0;
                 for (i = 0; i < books.Count; i++)
                 {
-                    if (books[i].BookCode == a.BookCode && books[i].Author.CompareTo(a.Author) == 1)
+                    if (books[i].BookCode == a.BookCode && books[i].Author.CompareTo(a.Author) == 0)
                     {
-                        a.Number = books[i].Number + 1;
-                        book.Author = a.Author;
-                        book.Date = a.Date;
-                        book.BookCode = a.BookCode;
-                        book.BookName = a.Name;
-                        book.Number = a.Number;
+                        book = db.qlyBooks.Where(x => x.BookCode == a.BookCode).Single();
+                        book.Number += 1;
                         db.SubmitChanges();
                         break;
                     }
-                    if (books[i].BookCode == a.BookCode)
+                    if (books[i].BookCode == a.BookCode && books[i].Author.CompareTo(a.Author) != 0)
                     {
                         MessageBox.Show("Ma sach da ton tai. Moi nhap lai thong tin sach!");
                         break;
@@ -80,7 +76,6 @@ namespace DoAnOOP
                 }
                 if (i == books.Count)
                 {
-                    MessageBox.Show(a.bookDetail());
                     book.Author = a.Author;
                     book.Date = a.Date;
                     book.BookCode = a.BookCode;
@@ -111,6 +106,70 @@ namespace DoAnOOP
                 a += members[i].printfDetail();
             }
             MessageBox.Show(a);
+        }
+
+        private void search(string a,string b)
+        {
+            int temp = int.Parse(a);
+            var list = (from m in db.qlyBooks where m.BookCode == temp && m.BookName.CompareTo(b) == 0 select m).ToList();    
+            if (list.Count > 0)
+            {
+                this.do_an_oopDataSet.Tables.Clear();
+                this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
+                dataGridView1.DataSource = list;
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay trong thu vien.");
+            }
+
+        }
+        private void btn_search_librarian_Click(object sender, EventArgs e)
+        {
+            Form3 a = new Form3();
+            a.truyen = new Form3.truyenDuLieu(search);
+            a.ShowDialog();
+
+        }
+
+        private void btn_search_member_Click(object sender, EventArgs e)
+        {
+            Form3 a = new Form3();
+            a.truyen = new Form3.truyenDuLieu(search);
+            a.ShowDialog();
+        }
+
+        static int temp = 3;
+        private void login(string a,string b)
+        {
+            if (a.CompareTo("Admin") == 0 && b.CompareTo("123456") == 0)
+            {
+                grBox_libra.Visible = true;
+                lbl_hienThi.Text = "Quan tri vien";
+                lbl_hienThi.Visible = true;
+            }
+            else
+                temp--;
+
+        }
+        private void btn_librarian_Click(object sender, EventArgs e)
+        {
+            if(temp > 0)
+            {
+                Form3 a = new Form3();
+                a.reName();
+                a.truyen = new Form3.truyenDuLieu(login);
+                a.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Ban da het so lan thu");
+            }
+        }
+
+        private void btn_member_Click(object sender, EventArgs e)
+        {
+            grBox_mem.Visible = true;
         }
     }
 }
