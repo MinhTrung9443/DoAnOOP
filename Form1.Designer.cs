@@ -42,14 +42,14 @@
             this.btn_return = new System.Windows.Forms.Button();
             this.btn_issue = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
-            this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.bookCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
+            this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.lbl_hienThi = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grBox_libra.SuspendLayout();
@@ -149,7 +149,7 @@
             this.grBox_mem.Controls.Add(this.btn_search_member);
             this.grBox_mem.Controls.Add(this.btn_return);
             this.grBox_mem.Controls.Add(this.btn_issue);
-            this.grBox_mem.Location = new System.Drawing.Point(838, 238);
+            this.grBox_mem.Location = new System.Drawing.Point(422, 229);
             this.grBox_mem.Name = "grBox_mem";
             this.grBox_mem.Size = new System.Drawing.Size(414, 317);
             this.grBox_mem.TabIndex = 10;
@@ -202,20 +202,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(758, 568);
             this.dataGridView1.TabIndex = 8;
             // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.do_an_oopDataSet;
-            // 
-            // do_an_oopDataSet
-            // 
-            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
-            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
-            // 
             // bookCodeDataGridViewTextBoxColumn
             // 
             this.bookCodeDataGridViewTextBoxColumn.DataPropertyName = "BookCode";
@@ -256,10 +242,24 @@
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
             this.numberDataGridViewTextBoxColumn.Width = 110;
             // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "Book";
+            this.bookBindingSource.DataSource = this.do_an_oopDataSet;
+            // 
+            // do_an_oopDataSet
+            // 
+            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
+            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
             // lbl_hienThi
             // 
             this.lbl_hienThi.AutoSize = true;
-            this.lbl_hienThi.Location = new System.Drawing.Point(1041, 581);
+            this.lbl_hienThi.Location = new System.Drawing.Point(839, 582);
             this.lbl_hienThi.Name = "lbl_hienThi";
             this.lbl_hienThi.Size = new System.Drawing.Size(44, 16);
             this.lbl_hienThi.TabIndex = 11;
