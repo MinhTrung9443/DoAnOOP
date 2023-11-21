@@ -12,7 +12,7 @@ namespace DoAnOOP
 {
     public partial class Form1 : Form
     {
-        qlyBook book = new qlyBook();
+        qlyBook book ;
         qlyMember member = new qlyMember();
         database_DoAnDataContext db = new database_DoAnDataContext();
         List<Book> books = new List<Book>();
@@ -59,6 +59,7 @@ namespace DoAnOOP
         {
             try
             {
+                book = new qlyBook();
                 int i = 0;
                 for (i = 0; i < books.Count; i++)
                 {
