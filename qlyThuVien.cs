@@ -185,6 +185,7 @@ namespace DoAnOOP
                     var l = (from k in db.qlyMembers where k.Id == mem.Id && k.BookCode == x select k).ToList();
                     if (l.Count > 0)
                     {
+                        member = db.qlyMembers.Where(k => k.Id == mem.Id && k.BookCode == x).First();
                         int temp = (int)member.BookNumber;
                         member.Number = temp + 1;
                         db.SubmitChanges();
@@ -199,6 +200,7 @@ namespace DoAnOOP
                         member.BookCode = book.BookCode;
                         member.BookName = book.BookName;
                         member.BookNumber = 1;
+                        member.stt = (int)db.qlyMembers.Max(k => k.stt) + 1;
                         db.qlyMembers.InsertOnSubmit(member);
                         db.SubmitChanges();
                         return;
@@ -239,7 +241,8 @@ namespace DoAnOOP
                 member = db.qlyMembers.Where(s => s.BookCode == x).First();
                 if ((int)member.Number > 1)
                 {
-                    member.Number = (int)member.Number - 1;
+                    int ta = (int)member.Number;
+                    member.Number = ta - 1;
                 }
                 else
                 {

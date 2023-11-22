@@ -346,7 +346,7 @@ namespace DoAnOOP
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private System.Nullable<int> _Id;
 		
 		private string _Name;
 		
@@ -354,17 +354,19 @@ namespace DoAnOOP
 		
 		private System.Nullable<int> _Number;
 		
-		private int _BookCode;
+		private System.Nullable<int> _BookCode;
 		
 		private string _BookName;
 		
 		private System.Nullable<int> _BookNumber;
 		
+		private int _stt;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
+    partial void OnIdChanging(System.Nullable<int> value);
     partial void OnIdChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
@@ -372,12 +374,14 @@ namespace DoAnOOP
     partial void OnAddressChanged();
     partial void OnNumberChanging(System.Nullable<int> value);
     partial void OnNumberChanged();
-    partial void OnBookCodeChanging(int value);
+    partial void OnBookCodeChanging(System.Nullable<int> value);
     partial void OnBookCodeChanged();
     partial void OnBookNameChanging(string value);
     partial void OnBookNameChanged();
     partial void OnBookNumberChanging(System.Nullable<int> value);
     partial void OnBookNumberChanged();
+    partial void OnsttChanging(int value);
+    partial void OnsttChanged();
     #endregion
 		
 		public qlyMember()
@@ -385,8 +389,8 @@ namespace DoAnOOP
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int")]
+		public System.Nullable<int> Id
 		{
 			get
 			{
@@ -465,8 +469,8 @@ namespace DoAnOOP
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookCode", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int BookCode
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookCode", DbType="Int")]
+		public System.Nullable<int> BookCode
 		{
 			get
 			{
@@ -521,6 +525,26 @@ namespace DoAnOOP
 					this._BookNumber = value;
 					this.SendPropertyChanged("BookNumber");
 					this.OnBookNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stt", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int stt
+		{
+			get
+			{
+				return this._stt;
+			}
+			set
+			{
+				if ((this._stt != value))
+				{
+					this.OnsttChanging(value);
+					this.SendPropertyChanging();
+					this._stt = value;
+					this.SendPropertyChanged("stt");
+					this.OnsttChanged();
 				}
 			}
 		}

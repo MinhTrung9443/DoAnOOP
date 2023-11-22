@@ -14,10 +14,10 @@
         <elementListCompartment Id="57cce9ba-ab78-44fb-8f41-410c16a55f82" absoluteBounds="4.89, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1617c4d8-25fe-4c99-9593-47610c477aab" absoluteBounds="1.25, 1.125, 2, 2.1554996744791666">
+    <classShape Id="b14ca213-f270-4bfc-be10-0ba4192100f2" absoluteBounds="0.875, 1.125, 2, 2.3478011067708335">
       <DataClassMoniker Name="/database_DoAnDataContext/qlyMember" />
       <nestedChildShapes>
-        <elementListCompartment Id="f06bfe60-ef8d-49da-a0d5-3947d0083fe2" absoluteBounds="1.2650000000000001, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="07c86c86-3501-4917-a2b8-9871479a6459" absoluteBounds="0.89, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

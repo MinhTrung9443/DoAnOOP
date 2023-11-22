@@ -17,13 +17,14 @@
   </Table>
   <Table Name="dbo.Member" Member="qlyMembers">
     <Type Name="qlyMember">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="BookCode" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="BookName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="BookNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stt" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
