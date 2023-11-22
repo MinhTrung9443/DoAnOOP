@@ -1,6 +1,6 @@
 ﻿namespace DoAnOOP
 {
-    partial class Form1
+    partial class qlyThuVien
     {
         /// <summary>
         /// Required designer variable.
@@ -107,6 +107,7 @@
             this.btn_report.TabIndex = 4;
             this.btn_report.Text = "Report";
             this.btn_report.UseVisualStyleBackColor = true;
+            this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
             // 
             // btn_search_librarian
             // 
@@ -174,6 +175,7 @@
             this.btn_return.TabIndex = 7;
             this.btn_return.Text = "Return Book";
             this.btn_return.UseVisualStyleBackColor = true;
+            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
             // btn_issue
             // 
@@ -183,6 +185,7 @@
             this.btn_issue.TabIndex = 6;
             this.btn_issue.Text = "Issue Book";
             this.btn_issue.UseVisualStyleBackColor = true;
+            this.btn_issue.Click += new System.EventHandler(this.btn_issue_Click);
             // 
             // dataGridView1
             // 
@@ -266,7 +269,7 @@
             this.lbl_hienThi.Text = "label1";
             this.lbl_hienThi.Visible = false;
             // 
-            // Form1
+            // qlyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -276,7 +279,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grBox_libra);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "qlyThuVien";
             this.Text = "Quan ly thu vien";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

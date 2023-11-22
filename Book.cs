@@ -31,7 +31,7 @@ namespace DoAnOOP
 
         public string bookDetail()
         {
-            return "BookCode: " + BookCode + " Name: " + Name + " Author: " + Author + " Number: "+ Number + " " + Date.ToString();
+            return "BookCode: " + BookCode + " Name: " + Name + " Author: " + Author +  " " + Date.ToShortDateString();
         }
     }
 }

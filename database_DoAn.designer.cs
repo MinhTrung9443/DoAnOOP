@@ -33,6 +33,9 @@ namespace DoAnOOP
     partial void InsertqlyBook(qlyBook instance);
     partial void UpdateqlyBook(qlyBook instance);
     partial void DeleteqlyBook(qlyBook instance);
+    partial void InsertqlyLogin(qlyLogin instance);
+    partial void UpdateqlyLogin(qlyLogin instance);
+    partial void DeleteqlyLogin(qlyLogin instance);
     partial void InsertqlyMember(qlyMember instance);
     partial void UpdateqlyMember(qlyMember instance);
     partial void DeleteqlyMember(qlyMember instance);
@@ -73,6 +76,14 @@ namespace DoAnOOP
 			get
 			{
 				return this.GetTable<qlyBook>();
+			}
+		}
+		
+		public System.Data.Linq.Table<qlyLogin> qlyLogins
+		{
+			get
+			{
+				return this.GetTable<qlyLogin>();
 			}
 		}
 		
@@ -243,6 +254,92 @@ namespace DoAnOOP
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
+	public partial class qlyLogin : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Name;
+		
+		private System.Nullable<int> _Key;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnKeyChanging(System.Nullable<int> value);
+    partial void OnKeyChanged();
+    #endregion
+		
+		public qlyLogin()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Key]", Storage="_Key", DbType="Int")]
+		public System.Nullable<int> Key
+		{
+			get
+			{
+				return this._Key;
+			}
+			set
+			{
+				if ((this._Key != value))
+				{
+					this.OnKeyChanging(value);
+					this.SendPropertyChanging();
+					this._Key = value;
+					this.SendPropertyChanged("Key");
+					this.OnKeyChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Member")]
 	public partial class qlyMember : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -257,6 +354,12 @@ namespace DoAnOOP
 		
 		private System.Nullable<int> _Number;
 		
+		private int _BookCode;
+		
+		private string _BookName;
+		
+		private System.Nullable<int> _BookNumber;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -269,6 +372,12 @@ namespace DoAnOOP
     partial void OnAddressChanged();
     partial void OnNumberChanging(System.Nullable<int> value);
     partial void OnNumberChanged();
+    partial void OnBookCodeChanging(int value);
+    partial void OnBookCodeChanged();
+    partial void OnBookNameChanging(string value);
+    partial void OnBookNameChanged();
+    partial void OnBookNumberChanging(System.Nullable<int> value);
+    partial void OnBookNumberChanged();
     #endregion
 		
 		public qlyMember()
@@ -276,7 +385,7 @@ namespace DoAnOOP
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
 		public int Id
 		{
 			get
@@ -352,6 +461,66 @@ namespace DoAnOOP
 					this._Number = value;
 					this.SendPropertyChanged("Number");
 					this.OnNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookCode", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int BookCode
+		{
+			get
+			{
+				return this._BookCode;
+			}
+			set
+			{
+				if ((this._BookCode != value))
+				{
+					this.OnBookCodeChanging(value);
+					this.SendPropertyChanging();
+					this._BookCode = value;
+					this.SendPropertyChanged("BookCode");
+					this.OnBookCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookName", DbType="NVarChar(50)")]
+		public string BookName
+		{
+			get
+			{
+				return this._BookName;
+			}
+			set
+			{
+				if ((this._BookName != value))
+				{
+					this.OnBookNameChanging(value);
+					this.SendPropertyChanging();
+					this._BookName = value;
+					this.SendPropertyChanged("BookName");
+					this.OnBookNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookNumber", DbType="Int")]
+		public System.Nullable<int> BookNumber
+		{
+			get
+			{
+				return this._BookNumber;
+			}
+			set
+			{
+				if ((this._BookNumber != value))
+				{
+					this.OnBookNumberChanging(value);
+					this.SendPropertyChanging();
+					this._BookNumber = value;
+					this.SendPropertyChanged("BookNumber");
+					this.OnBookNumberChanged();
 				}
 			}
 		}
