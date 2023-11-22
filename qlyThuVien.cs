@@ -70,13 +70,13 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Loi dang trong qua trinh fix.");
             }
+            Form1_Load(sender, e);
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
             Form_ttSach a = new Form_ttSach();
             a.truyen = new Form_ttSach.truyenDuLieu(add);
             a.ShowDialog();
-            Form1_Load(sender, e);
         }
         private void search(string a,string b)
         {
@@ -141,6 +141,7 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Ban da het so lan thu");
             }
+            Form1_Load(sender, e);
         }
         private void nguoiDung(Member a, object sender, EventArgs e)
         {
@@ -155,6 +156,7 @@ namespace DoAnOOP
             lbl_hienThi.Visible = true;
             grBox_libra.Visible = false;
             grBox_mem.Visible = true;
+            Form1_Load(sender, e);
         }
         private void muonSach(string a, string b)
         {
