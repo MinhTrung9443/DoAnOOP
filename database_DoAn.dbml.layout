@@ -2,22 +2,22 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="database_DoAn">
   <DataContextMoniker Name="/database_DoAnDataContext" />
   <nestedChildShapes>
-    <classShape Id="af9f4303-5b4b-4670-8a30-e07d023cd420" absoluteBounds="2.625, 1.875, 2, 1.7708968098958331">
+    <classShape Id="af9f4303-5b4b-4670-8a30-e07d023cd420" absoluteBounds="3.5, 1.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/database_DoAnDataContext/qlyBook" />
       <nestedChildShapes>
-        <elementListCompartment Id="470145b6-0d9b-426e-bf5d-c77638aeb2c6" absoluteBounds="2.64, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="470145b6-0d9b-426e-bf5d-c77638aeb2c6" absoluteBounds="3.515, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2ccd8c41-79f1-4e6f-ab61-9d69109fbd66" absoluteBounds="4.875, 1, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/database_DoAnDataContext/qlyLogin" />
-      <nestedChildShapes>
-        <elementListCompartment Id="57cce9ba-ab78-44fb-8f41-410c16a55f82" absoluteBounds="4.89, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="b14ca213-f270-4bfc-be10-0ba4192100f2" absoluteBounds="0.875, 1.125, 2, 2.3478011067708335">
+    <classShape Id="b14ca213-f270-4bfc-be10-0ba4192100f2" absoluteBounds="1, 0.75, 2, 2.3478011067708335">
       <DataClassMoniker Name="/database_DoAnDataContext/qlyMember" />
       <nestedChildShapes>
-        <elementListCompartment Id="07c86c86-3501-4917-a2b8-9871479a6459" absoluteBounds="0.89, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="07c86c86-3501-4917-a2b8-9871479a6459" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c47fffa4-cde2-45cf-9764-0d43b1c738b7" absoluteBounds="5.75, 1.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/database_DoAnDataContext/qlyLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="283947bc-9313-43f5-a240-5055f47b0baa" absoluteBounds="5.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -138,7 +138,7 @@
             this.grBox_libra.Controls.Add(this.btn_report);
             this.grBox_libra.Controls.Add(this.btn_viewMember);
             this.grBox_libra.Controls.Add(this.btn_add);
-            this.grBox_libra.Location = new System.Drawing.Point(842, 228);
+            this.grBox_libra.Location = new System.Drawing.Point(842, 201);
             this.grBox_libra.Name = "grBox_libra";
             this.grBox_libra.Size = new System.Drawing.Size(416, 318);
             this.grBox_libra.TabIndex = 7;
@@ -150,7 +150,7 @@
             this.grBox_mem.Controls.Add(this.btn_search_member);
             this.grBox_mem.Controls.Add(this.btn_return);
             this.grBox_mem.Controls.Add(this.btn_issue);
-            this.grBox_mem.Location = new System.Drawing.Point(838, 262);
+            this.grBox_mem.Location = new System.Drawing.Point(842, 232);
             this.grBox_mem.Name = "grBox_mem";
             this.grBox_mem.Size = new System.Drawing.Size(414, 317);
             this.grBox_mem.TabIndex = 10;

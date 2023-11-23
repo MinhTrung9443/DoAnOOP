@@ -33,12 +33,12 @@ namespace DoAnOOP
     partial void InsertqlyBook(qlyBook instance);
     partial void UpdateqlyBook(qlyBook instance);
     partial void DeleteqlyBook(qlyBook instance);
-    partial void InsertqlyLogin(qlyLogin instance);
-    partial void UpdateqlyLogin(qlyLogin instance);
-    partial void DeleteqlyLogin(qlyLogin instance);
     partial void InsertqlyMember(qlyMember instance);
     partial void UpdateqlyMember(qlyMember instance);
     partial void DeleteqlyMember(qlyMember instance);
+    partial void InsertqlyLogin(qlyLogin instance);
+    partial void UpdateqlyLogin(qlyLogin instance);
+    partial void DeleteqlyLogin(qlyLogin instance);
     #endregion
 		
 		public database_DoAnDataContext() : 
@@ -79,19 +79,19 @@ namespace DoAnOOP
 			}
 		}
 		
-		public System.Data.Linq.Table<qlyLogin> qlyLogins
-		{
-			get
-			{
-				return this.GetTable<qlyLogin>();
-			}
-		}
-		
 		public System.Data.Linq.Table<qlyMember> qlyMembers
 		{
 			get
 			{
 				return this.GetTable<qlyMember>();
+			}
+		}
+		
+		public System.Data.Linq.Table<qlyLogin> qlyLogins
+		{
+			get
+			{
+				return this.GetTable<qlyLogin>();
 			}
 		}
 	}
@@ -229,92 +229,6 @@ namespace DoAnOOP
 					this._Number = value;
 					this.SendPropertyChanged("Number");
 					this.OnNumberChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
-	public partial class qlyLogin : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _Name;
-		
-		private System.Nullable<int> _Key;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnKeyChanging(System.Nullable<int> value);
-    partial void OnKeyChanged();
-    #endregion
-		
-		public qlyLogin()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Key]", Storage="_Key", DbType="Int")]
-		public System.Nullable<int> Key
-		{
-			get
-			{
-				return this._Key;
-			}
-			set
-			{
-				if ((this._Key != value))
-				{
-					this.OnKeyChanging(value);
-					this.SendPropertyChanging();
-					this._Key = value;
-					this.SendPropertyChanged("Key");
-					this.OnKeyChanged();
 				}
 			}
 		}
@@ -545,6 +459,92 @@ namespace DoAnOOP
 					this._stt = value;
 					this.SendPropertyChanged("stt");
 					this.OnsttChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Login")]
+	public partial class qlyLogin : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Name;
+		
+		private string _Key;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnKeyChanging(string value);
+    partial void OnKeyChanged();
+    #endregion
+		
+		public qlyLogin()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Key]", Storage="_Key", DbType="NVarChar(50)")]
+		public string Key
+		{
+			get
+			{
+				return this._Key;
+			}
+			set
+			{
+				if ((this._Key != value))
+				{
+					this.OnKeyChanging(value);
+					this.SendPropertyChanging();
+					this._Key = value;
+					this.SendPropertyChanged("Key");
+					this.OnKeyChanged();
 				}
 			}
 		}
