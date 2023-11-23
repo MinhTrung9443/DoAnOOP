@@ -14,7 +14,6 @@ namespace DoAnOOP
     public partial class qlyThuVien : Form
     {
         qlyBook book;
-        //qlyLogin log;
         qlyMember member;
         database_DoAnDataContext db = new database_DoAnDataContext();
 
@@ -116,7 +115,9 @@ namespace DoAnOOP
         static int temp = 3;
         private void login(string a,string b)
         {
-            if (a.CompareTo("Admin") == 0 && b.CompareTo("123456") == 0)
+            var list = (from x in db.qlyLogins where a.CompareTo(x.Name) == 0 && b.CompareTo(x.Key) == 0 select x).ToList();
+
+            if (list.Count == 1)
             {
                 grBox_libra.Visible = true;
                 grBox_mem.Visible = false;
@@ -272,7 +273,11 @@ namespace DoAnOOP
             ViewMember a = new ViewMember();
             a.ShowDialog();
         }
-
+        /// <summary>
+        ///  chức năng dưới này chưa có xong hú hú hú hú hú hú hú 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_report_Click(object sender, EventArgs e)
         {
             TextWriter wtr = new StreamWriter(@"D:\\Report.txt");
