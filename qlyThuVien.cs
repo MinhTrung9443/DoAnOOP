@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,7 @@ namespace DoAnOOP
                 if (list.Count > 0)
                 {
                     qlyBook temp = new qlyBook();
-                    temp = db.qlyBooks.Where(s => s.BookCode == a.BookCode).First();
+                    temp = db.qlyBooks.Where(s => s.BookCode == a.BookCode).Single();
                     if (a.Name.CompareTo(temp.BookName) == 0 && a.Author.CompareTo(temp.Author) == 0
                     && a.Date == temp.Date)
                     {
@@ -46,12 +47,10 @@ namespace DoAnOOP
                         temp.Number = x;
                         db.SubmitChanges();
                         MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
-                        return;
                     }
                     else if (a.Name.CompareTo(temp.BookName) != 0)
                     {
                         MessageBox.Show("Da ton tai ma sach.");
-                        return;
                     }
                 }
                 else
@@ -191,6 +190,7 @@ namespace DoAnOOP
                         int temp = (int)member.BookNumber;
                         member.Number = temp + 1;
                         db.SubmitChanges();
+                        MessageBox.Show("Da muon sach xong");
                         return;
                     }
                     else
@@ -205,6 +205,7 @@ namespace DoAnOOP
                         member.stt = (int)db.qlyMembers.Max(k => k.stt) + 1;
                         db.qlyMembers.InsertOnSubmit(member);
                         db.SubmitChanges();
+                        MessageBox.Show("Da muon sach xong");
                         return;
                     }
                 }
@@ -251,6 +252,7 @@ namespace DoAnOOP
                     db.qlyMembers.DeleteOnSubmit(member);
                 }
                 db.SubmitChanges();
+                MessageBox.Show("Da tra sach xong");
             }
             else
             {
@@ -267,12 +269,20 @@ namespace DoAnOOP
 
         private void btn_viewMember_Click(object sender, EventArgs e)
         {
-
+            ViewMember a = new ViewMember();
+            a.ShowDialog();
         }
 
         private void btn_report_Click(object sender, EventArgs e)
         {
-
+            TextWriter wtr = new StreamWriter(@"D:\\Report.txt");
+            wtr.WriteLine("\tId \t Name  \t\t Address \t\t NumberContact \t\t BookCode \t\t BookName \t\t BookNumber \n");
+            var list = (from a in db.qlyMembers select a).ToList();
+            for (int i = 0; i < list.Count; i++)
+            {
+                wtr.WriteLine("" + list[i].Id + "\t" + list[i].Name + "\t" + list[i].Address + "\t" + list[i].Number);
+            }
+            wtr.Close();
         }
     }
 }
