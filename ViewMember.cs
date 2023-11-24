@@ -26,5 +26,18 @@ namespace DoAnOOP
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                var list = (from a in db.qlyMembers select a).ToList();
+                dataGridView1.DataSource = list;
+            }
+            else
+            {
+                var list = (from a in db.qlyMembers where a.Id == int.Parse(textBox1.Text) select a).ToList();
+                dataGridView1.DataSource = list;
+            }
+        }
     }
 }
