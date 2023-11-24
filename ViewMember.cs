@@ -35,7 +35,19 @@ namespace DoAnOOP
             }
             else
             {
-                var list = (from a in db.qlyMembers where a.Id == int.Parse(textBox1.Text) select a).ToList();
+                int t = 0;
+                try
+                {
+                    t = int.Parse(textBox1.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Moi nhap vao id la mot so nguyen.");
+                    textBox1.Text = "";
+                    var l = (from a in db.qlyMembers select a).ToList();
+                    dataGridView1.DataSource = l;
+                }
+                var list = (from a in db.qlyMembers where a.Id == t select a).ToList();
                 dataGridView1.DataSource = list;
             }
         }
