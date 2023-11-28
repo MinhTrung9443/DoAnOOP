@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 192);
+            this.ClientSize = new System.Drawing.Size(539, 222);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.tbx_bookcode);
             this.Controls.Add(this.tbx_bookName);

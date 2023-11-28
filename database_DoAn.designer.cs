@@ -490,18 +490,38 @@ namespace DoAnOOP
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Name;
+		private string _TenDangNhap;
 		
 		private string _Key;
+		
+		private System.Nullable<int> _Id;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _NumberContact;
+		
+		private string _Address;
+		
+		private System.Nullable<int> _check;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
+    partial void OnTenDangNhapChanging(string value);
+    partial void OnTenDangNhapChanged();
     partial void OnKeyChanging(string value);
     partial void OnKeyChanged();
+    partial void OnIdChanging(System.Nullable<int> value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnNumberContactChanging(System.Nullable<int> value);
+    partial void OnNumberContactChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OncheckChanging(System.Nullable<int> value);
+    partial void OncheckChanged();
     #endregion
 		
 		public qlyLogin()
@@ -509,22 +529,22 @@ namespace DoAnOOP
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TenDangNhap
 		{
 			get
 			{
-				return this._Name;
+				return this._TenDangNhap;
 			}
 			set
 			{
-				if ((this._Name != value))
+				if ((this._TenDangNhap != value))
 				{
-					this.OnNameChanging(value);
+					this.OnTenDangNhapChanging(value);
 					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
+					this._TenDangNhap = value;
+					this.SendPropertyChanged("TenDangNhap");
+					this.OnTenDangNhapChanged();
 				}
 			}
 		}
@@ -545,6 +565,106 @@ namespace DoAnOOP
 					this._Key = value;
 					this.SendPropertyChanged("Key");
 					this.OnKeyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int")]
+		public System.Nullable<int> Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberContact", DbType="Int")]
+		public System.Nullable<int> NumberContact
+		{
+			get
+			{
+				return this._NumberContact;
+			}
+			set
+			{
+				if ((this._NumberContact != value))
+				{
+					this.OnNumberContactChanging(value);
+					this.SendPropertyChanging();
+					this._NumberContact = value;
+					this.SendPropertyChanged("NumberContact");
+					this.OnNumberContactChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[check]", Storage="_check", DbType="Int")]
+		public System.Nullable<int> check
+		{
+			get
+			{
+				return this._check;
+			}
+			set
+			{
+				if ((this._check != value))
+				{
+					this.OncheckChanging(value);
+					this.SendPropertyChanging();
+					this._check = value;
+					this.SendPropertyChanged("check");
+					this.OncheckChanged();
 				}
 			}
 		}

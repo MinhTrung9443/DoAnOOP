@@ -22,7 +22,7 @@ namespace DoAnOOP
         {
             label1.Text = "Ten dang nhap";
             label2.Text = "Mat khau";
-            this.Text = "Danh nhap";
+            this.Text = "Sign in";
         }
         private void btn_ok_Click(object sender, EventArgs e)
         {

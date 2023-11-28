@@ -16,9 +16,7 @@ namespace DoAnOOP
         qlyBook book;
         qlyMember member;
         database_DoAnDataContext db = new database_DoAnDataContext();
-
-        Member mem = new Member();
-        List<Book> books = new List<Book>();
+        Person mem;
         public qlyThuVien()
         {
             InitializeComponent();
@@ -97,7 +95,7 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Khong tim thay trong thu vien.");
             }
-
+            dataGridView1.Visible = true;
         }
         private void btn_search_librarian_Click(object sender, EventArgs e)
         {
@@ -112,52 +110,7 @@ namespace DoAnOOP
             a.truyen = new Form3.truyenDuLieu(search);
             a.ShowDialog();
         }
-        static int temp = 3;
-        private void login(string a,string b)
-        {
-            var list = (from x in db.qlyLogins where a.CompareTo(x.Name) == 0 && b.CompareTo(x.Key) == 0 select x).ToList();
 
-            if (list.Count == 1)
-            {
-                grBox_libra.Visible = true;
-                grBox_mem.Visible = false;
-                lbl_hienThi.Text = "Quan tri vien";
-                lbl_hienThi.Visible = true;
-            }
-            else
-                temp--;
-
-        }
-        private void btn_librarian_Click(object sender, EventArgs e)
-        {
-            if(temp > 0)
-            {
-                Form3 a = new Form3();
-                a.reName();
-                a.truyen = new Form3.truyenDuLieu(login);
-                a.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Ban da het so lan thu");
-            }
-            Form1_Load(sender, e);
-        }
-        private void nguoiDung(Member a, object sender, EventArgs e)
-        {
-            mem = a;
-        }
-        private void btn_member_Click(object sender, EventArgs e)
-        {
-            Thong_tin a = new Thong_tin();
-            a.truyen = new Thong_tin.truyenDuLieu(nguoiDung);
-            a.ShowDialog();
-            lbl_hienThi.Text = "Nguoi dung " + mem.printfDetail();
-            lbl_hienThi.Visible = true;
-            grBox_libra.Visible = false;
-            grBox_mem.Visible = true;
-            Form1_Load(sender, e);
-        }
         private void muonSach(string a, string b)
         {
             int x = new int();
@@ -288,6 +241,48 @@ namespace DoAnOOP
                 wtr.WriteLine("" + list[i].Id + "\t" + list[i].Name + "\t" + list[i].Address + "\t" + list[i].Number);
             }
             wtr.Close();
+        }
+        private void thucthi(string a,string b)
+        {
+            var l = (from s in db.qlyLogins where a.CompareTo(s.TenDangNhap) == 0 && b.CompareTo(s.Key) == 0 select s).ToList();    
+            if (l.Count == 1)
+            {
+                foreach(qlyLogin t in l)
+                {
+                    if (t.check == 1)
+                    {
+                        mem = new Librarian(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
+                        dataGridView1.Visible = true;
+                        grBox_libra.Visible = true;
+                        grBox_mem.Visible = false;
+                        lbl_hienThi.Text = "Nguoi quan ly " + mem.printfDetail();
+                        lbl_hienThi.Visible = true;
+                    }
+                    else
+                    {
+                        mem = new Member(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
+                        dataGridView1.Visible = false;
+                        grBox_libra.Visible = false;
+                        grBox_mem.Visible = true;
+                        lbl_hienThi.Text = "Nguoi dung " + mem.printfDetail();
+                        lbl_hienThi.Visible = true;
+                    }
+                }
+            }
+        }
+        private void btn_signUp_Click(object sender, EventArgs e)
+        {
+            signUp a = new signUp();
+            a.truyen = new signUp.truyenDuLieu(thucthi);
+            a.ShowDialog();
+        }
+
+        private void btn_signIn_Click(object sender, EventArgs e)
+        {
+            Form3 a = new Form3();
+            a.reName();
+            a.truyen = new Form3.truyenDuLieu(thucthi);
+            a.ShowDialog();
         }
     }
 }

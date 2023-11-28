@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_member = new System.Windows.Forms.Button();
-            this.btn_librarian = new System.Windows.Forms.Button();
+            this.btn_signIn = new System.Windows.Forms.Button();
+            this.btn_signUp = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_viewMember = new System.Windows.Forms.Button();
             this.btn_report = new System.Windows.Forms.Button();
@@ -59,25 +59,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_member
+            // btn_signIn
             // 
-            this.btn_member.Location = new System.Drawing.Point(245, 49);
-            this.btn_member.Name = "btn_member";
-            this.btn_member.Size = new System.Drawing.Size(117, 46);
-            this.btn_member.TabIndex = 0;
-            this.btn_member.Text = "Member";
-            this.btn_member.UseVisualStyleBackColor = true;
-            this.btn_member.Click += new System.EventHandler(this.btn_member_Click);
+            this.btn_signIn.Location = new System.Drawing.Point(245, 49);
+            this.btn_signIn.Name = "btn_signIn";
+            this.btn_signIn.Size = new System.Drawing.Size(117, 46);
+            this.btn_signIn.TabIndex = 0;
+            this.btn_signIn.Text = "Sign in";
+            this.btn_signIn.UseVisualStyleBackColor = true;
+            this.btn_signIn.Click += new System.EventHandler(this.btn_signIn_Click);
             // 
-            // btn_librarian
+            // btn_signUp
             // 
-            this.btn_librarian.Location = new System.Drawing.Point(81, 49);
-            this.btn_librarian.Name = "btn_librarian";
-            this.btn_librarian.Size = new System.Drawing.Size(117, 46);
-            this.btn_librarian.TabIndex = 1;
-            this.btn_librarian.Text = "Librarian";
-            this.btn_librarian.UseVisualStyleBackColor = true;
-            this.btn_librarian.Click += new System.EventHandler(this.btn_librarian_Click);
+            this.btn_signUp.Location = new System.Drawing.Point(81, 49);
+            this.btn_signUp.Name = "btn_signUp";
+            this.btn_signUp.Size = new System.Drawing.Size(117, 46);
+            this.btn_signUp.TabIndex = 1;
+            this.btn_signUp.Text = "Sign up";
+            this.btn_signUp.UseVisualStyleBackColor = true;
+            this.btn_signUp.Click += new System.EventHandler(this.btn_signUp_Click);
             // 
             // btn_add
             // 
@@ -121,8 +121,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_librarian);
-            this.groupBox1.Controls.Add(this.btn_member);
+            this.groupBox1.Controls.Add(this.btn_signUp);
+            this.groupBox1.Controls.Add(this.btn_signIn);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.Location = new System.Drawing.Point(842, 48);
@@ -150,7 +150,7 @@
             this.grBox_mem.Controls.Add(this.btn_search_member);
             this.grBox_mem.Controls.Add(this.btn_return);
             this.grBox_mem.Controls.Add(this.btn_issue);
-            this.grBox_mem.Location = new System.Drawing.Point(842, 232);
+            this.grBox_mem.Location = new System.Drawing.Point(455, 222);
             this.grBox_mem.Name = "grBox_mem";
             this.grBox_mem.Size = new System.Drawing.Size(414, 317);
             this.grBox_mem.TabIndex = 10;
@@ -204,6 +204,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(758, 568);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.Visible = false;
             // 
             // bookCodeDataGridViewTextBoxColumn
             // 
@@ -295,8 +296,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_member;
-        private System.Windows.Forms.Button btn_librarian;
+        private System.Windows.Forms.Button btn_signIn;
+        private System.Windows.Forms.Button btn_signUp;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_viewMember;
         private System.Windows.Forms.Button btn_report;
