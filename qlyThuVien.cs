@@ -121,6 +121,7 @@ namespace DoAnOOP
             catch
             {
                 MessageBox.Show("Moi nhap Id la mot so nguyen");
+                return;
             }
             book = new qlyBook();
             var list = (from k in db.qlyBooks where k.BookCode == x && b.CompareTo(k.BookName) == 0 select k).ToList();
@@ -157,6 +158,7 @@ namespace DoAnOOP
                         member.BookName = book.BookName;
                         member.BookNumber = 1;
                         member.stt = (int)db.qlyMembers.Max(k => k.stt) + 1;
+                        member.stt = (int)member.stt;
                         db.qlyMembers.InsertOnSubmit(member);
                         db.SubmitChanges();
                         MessageBox.Show("Da muon sach xong");
@@ -171,6 +173,7 @@ namespace DoAnOOP
         }
         private void btn_issue_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible= false;
             Form3 a = new Form3();
             a.truyen = new Form3.truyenDuLieu(muonSach);
             a.ShowDialog();
@@ -215,6 +218,7 @@ namespace DoAnOOP
         }
         private void btn_return_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = false;
             Form3 a = new Form3();
             a.truyen = new Form3.truyenDuLieu(traSach);
             a.ShowDialog();
@@ -233,12 +237,11 @@ namespace DoAnOOP
         /// <param name="e"></param>
         private void btn_report_Click(object sender, EventArgs e)
         {
-            TextWriter wtr = new StreamWriter(@"D:\\Report.txt");
-            wtr.WriteLine("\tId \t Name  \t\t Address \t\t NumberContact \t\t BookCode \t\t BookName \t\t BookNumber \n");
-            var list = (from a in db.qlyMembers select a).ToList();
-            for (int i = 0; i < list.Count; i++)
+            TextWriter wtr = new StreamWriter("Report1.txt");
+            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName \t BookNumber \n");
+            foreach (qlyMember a in db.qlyMembers)
             {
-                wtr.WriteLine("" + list[i].Id + "\t" + list[i].Name + "\t" + list[i].Address + "\t" + list[i].Number);
+                wtr.WriteLine(a.Id+ "\t" + a.Name + "\t\t" + a.Address + "\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" +a.BookNumber);
             }
             wtr.Close();
         }
