@@ -241,7 +241,7 @@ namespace DoAnOOP
             wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName \t BookNumber \n");
             foreach (qlyMember a in db.qlyMembers)
             {
-                wtr.WriteLine(a.Id+ "\t" + a.Name + "\t\t" + a.Address + "\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" +a.BookNumber);
+                wtr.WriteLine(a.Id+ "\t" + a.Name + "\t\t" + a.Address + "\t\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" +a.BookNumber);
             }
             wtr.Close();
         }
