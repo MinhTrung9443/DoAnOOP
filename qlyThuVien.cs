@@ -230,7 +230,7 @@ namespace DoAnOOP
                 sachtra.Address = a.Address;
                 sachtra.BookCode = a.BookCode;
                 sachtra.BookName = a.BookName;
-                sachtra.BookNumber = 0;
+                sachtra.BookNumber = 1;
                 sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt)+1;
                 db.qlytraSaches.InsertOnSubmit(sachtra);
             }
