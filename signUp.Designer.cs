@@ -43,6 +43,7 @@
             this.rbtn_lib = new System.Windows.Forms.RadioButton();
             this.rbtn_mem = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_bao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbx_address
@@ -60,6 +61,7 @@
             this.tbx_contact.Name = "tbx_contact";
             this.tbx_contact.Size = new System.Drawing.Size(342, 33);
             this.tbx_contact.TabIndex = 24;
+            this.tbx_contact.TextChanged += new System.EventHandler(this.tbx_contact_TextChanged);
             // 
             // tbx_id
             // 
@@ -68,6 +70,7 @@
             this.tbx_id.Name = "tbx_id";
             this.tbx_id.Size = new System.Drawing.Size(342, 33);
             this.tbx_id.TabIndex = 23;
+            this.tbx_id.TextChanged += new System.EventHandler(this.tbx_id_TextChanged);
             // 
             // tbx_name
             // 
@@ -75,7 +78,7 @@
             this.tbx_name.Multiline = true;
             this.tbx_name.Name = "tbx_name";
             this.tbx_name.Size = new System.Drawing.Size(342, 34);
-            this.tbx_name.TabIndex = 22;
+            this.tbx_name.TabIndex = 3;
             // 
             // label4
             // 
@@ -119,7 +122,7 @@
             this.tbx_mk.Multiline = true;
             this.tbx_mk.Name = "tbx_mk";
             this.tbx_mk.Size = new System.Drawing.Size(342, 33);
-            this.tbx_mk.TabIndex = 29;
+            this.tbx_mk.TabIndex = 2;
             // 
             // tbx_tdn
             // 
@@ -127,7 +130,8 @@
             this.tbx_tdn.Multiline = true;
             this.tbx_tdn.Name = "tbx_tdn";
             this.tbx_tdn.Size = new System.Drawing.Size(342, 34);
-            this.tbx_tdn.TabIndex = 28;
+            this.tbx_tdn.TabIndex = 1;
+            this.tbx_tdn.TextChanged += new System.EventHandler(this.tbx_tdn_TextChanged);
             // 
             // label5
             // 
@@ -179,11 +183,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_bao
+            // 
+            this.lbl_bao.AutoSize = true;
+            this.lbl_bao.ForeColor = System.Drawing.Color.Red;
+            this.lbl_bao.Location = new System.Drawing.Point(169, 83);
+            this.lbl_bao.Name = "lbl_bao";
+            this.lbl_bao.Size = new System.Drawing.Size(44, 16);
+            this.lbl_bao.TabIndex = 33;
+            this.lbl_bao.Text = "label7";
+            this.lbl_bao.Visible = false;
+            // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 582);
+            this.Controls.Add(this.lbl_bao);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rbtn_mem);
             this.Controls.Add(this.rbtn_lib);
@@ -223,5 +239,6 @@
         private System.Windows.Forms.RadioButton rbtn_lib;
         private System.Windows.Forms.RadioButton rbtn_mem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_bao;
     }
 }

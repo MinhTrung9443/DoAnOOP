@@ -32,4 +32,16 @@
       <Column Name="[check]" Member="check" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.traSach" Member="qlytraSaches">
+    <Type Name="qlytraSach">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BookCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BookName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BookNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stt" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

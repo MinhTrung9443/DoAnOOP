@@ -39,6 +39,9 @@ namespace DoAnOOP
     partial void InsertqlyLogin(qlyLogin instance);
     partial void UpdateqlyLogin(qlyLogin instance);
     partial void DeleteqlyLogin(qlyLogin instance);
+    partial void InsertqlytraSach(qlytraSach instance);
+    partial void UpdateqlytraSach(qlytraSach instance);
+    partial void DeleteqlytraSach(qlytraSach instance);
     #endregion
 		
 		public database_DoAnDataContext() : 
@@ -92,6 +95,14 @@ namespace DoAnOOP
 			get
 			{
 				return this.GetTable<qlyLogin>();
+			}
+		}
+		
+		public System.Data.Linq.Table<qlytraSach> qlytraSaches
+		{
+			get
+			{
+				return this.GetTable<qlytraSach>();
 			}
 		}
 	}
@@ -665,6 +676,236 @@ namespace DoAnOOP
 					this._check = value;
 					this.SendPropertyChanged("check");
 					this.OncheckChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.traSach")]
+	public partial class qlytraSach : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Nullable<int> _Id;
+		
+		private string _Name;
+		
+		private string _Address;
+		
+		private System.Nullable<int> _Number;
+		
+		private System.Nullable<int> _BookCode;
+		
+		private string _BookName;
+		
+		private System.Nullable<int> _BookNumber;
+		
+		private int _stt;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(System.Nullable<int> value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnNumberChanging(System.Nullable<int> value);
+    partial void OnNumberChanged();
+    partial void OnBookCodeChanging(System.Nullable<int> value);
+    partial void OnBookCodeChanged();
+    partial void OnBookNameChanging(string value);
+    partial void OnBookNameChanged();
+    partial void OnBookNumberChanging(System.Nullable<int> value);
+    partial void OnBookNumberChanged();
+    partial void OnsttChanging(int value);
+    partial void OnsttChanged();
+    #endregion
+		
+		public qlytraSach()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int")]
+		public System.Nullable<int> Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="Int")]
+		public System.Nullable<int> Number
+		{
+			get
+			{
+				return this._Number;
+			}
+			set
+			{
+				if ((this._Number != value))
+				{
+					this.OnNumberChanging(value);
+					this.SendPropertyChanging();
+					this._Number = value;
+					this.SendPropertyChanged("Number");
+					this.OnNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookCode", DbType="Int")]
+		public System.Nullable<int> BookCode
+		{
+			get
+			{
+				return this._BookCode;
+			}
+			set
+			{
+				if ((this._BookCode != value))
+				{
+					this.OnBookCodeChanging(value);
+					this.SendPropertyChanging();
+					this._BookCode = value;
+					this.SendPropertyChanged("BookCode");
+					this.OnBookCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookName", DbType="NVarChar(50)")]
+		public string BookName
+		{
+			get
+			{
+				return this._BookName;
+			}
+			set
+			{
+				if ((this._BookName != value))
+				{
+					this.OnBookNameChanging(value);
+					this.SendPropertyChanging();
+					this._BookName = value;
+					this.SendPropertyChanged("BookName");
+					this.OnBookNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookNumber", DbType="Int")]
+		public System.Nullable<int> BookNumber
+		{
+			get
+			{
+				return this._BookNumber;
+			}
+			set
+			{
+				if ((this._BookNumber != value))
+				{
+					this.OnBookNumberChanging(value);
+					this.SendPropertyChanging();
+					this._BookNumber = value;
+					this.SendPropertyChanged("BookNumber");
+					this.OnBookNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stt", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int stt
+		{
+			get
+			{
+				return this._stt;
+			}
+			set
+			{
+				if ((this._stt != value))
+				{
+					this.OnsttChanging(value);
+					this.SendPropertyChanging();
+					this._stt = value;
+					this.SendPropertyChanged("stt");
+					this.OnsttChanged();
 				}
 			}
 		}

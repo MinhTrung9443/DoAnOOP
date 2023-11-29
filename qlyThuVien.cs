@@ -15,6 +15,7 @@ namespace DoAnOOP
     {
         qlyBook book;
         qlyMember member;
+        qlytraSach sachtra;
         database_DoAnDataContext db = new database_DoAnDataContext();
         Person mem;
         public qlyThuVien()
@@ -199,6 +200,7 @@ namespace DoAnOOP
                 int temp = (int)book.Number;
                 book.Number = temp + 1;
                 member = db.qlyMembers.Where(s => s.BookCode == x).First();
+                addTraSach(member);
                 if ((int)member.Number > 1)
                 {
                     int ta = (int)member.Number;
@@ -215,6 +217,30 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Khong tra sach duoc");
             }
+        }
+        private void addTraSach(qlyMember a)
+        {
+            sachtra = new qlytraSach();
+            var l = (from s in db.qlytraSaches where s.Id == a.Id && s.BookCode == a.BookCode select s).ToList();
+            if (l.Count == 0)
+            {
+                sachtra.Id = a.Id;
+                sachtra.Name = a.Name;
+                sachtra.Number = a.Number;
+                sachtra.Address = a.Address;
+                sachtra.BookCode = a.BookCode;
+                sachtra.BookName = a.BookName;
+                sachtra.BookNumber = 0;
+                sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt)+1;
+                db.qlytraSaches.InsertOnSubmit(sachtra);
+            }
+            else
+            {
+                sachtra = db.qlytraSaches.Where(s => s.Id == a.Id && s.BookCode == a.BookCode).First();
+                int temp = (int)sachtra.BookNumber;
+                sachtra.BookNumber = temp + 1;
+            }
+            db.SubmitChanges();
         }
         private void btn_return_Click(object sender, EventArgs e)
         {

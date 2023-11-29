@@ -23,6 +23,11 @@ namespace DoAnOOP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (lbl_bao.Visible == true)
+            {
+                MessageBox.Show("Thong tin khong hop le.");
+                return;
+            }
             login = new qlyLogin();
             login.TenDangNhap = tbx_tdn.Text;
             login.Key = tbx_mk.Text;
@@ -46,6 +51,53 @@ namespace DoAnOOP
             }
    
             Close();
+        }
+
+        private void tbx_tdn_TextChanged(object sender, EventArgs e)
+        {
+            if (tbx_tdn.Text != "")
+            {
+                var l = (from a in db.qlyLogins where tbx_tdn.Text.CompareTo(a.TenDangNhap) == 0 select a).ToList();
+                if (l.Count > 0)
+                {
+                    lbl_bao.Text = "Da ton tai ten dang nhap. Moi nhap ten khac.";
+                    lbl_bao.Visible = true;
+                }
+                else
+                {
+                    lbl_bao.Visible = false;
+                }
+            }
+        }
+
+        private void tbx_id_TextChanged(object sender, EventArgs e)
+        {
+            if (tbx_id.Text != "")
+            try
+            {
+                int a = int.Parse(tbx_id.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Moi dien id la so.");
+                tbx_id.Text = string.Empty;
+                return;
+            }
+        }
+
+        private void tbx_contact_TextChanged(object sender, EventArgs e)
+        {
+            if (tbx_contact.Text != "")
+            try
+            {
+                int a = int.Parse(tbx_contact.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Moi dien so lien lac la so.");
+                tbx_contact.Text = string.Empty;
+                return;
+            }
         }
     }
 }
