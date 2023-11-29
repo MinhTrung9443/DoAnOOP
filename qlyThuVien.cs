@@ -190,6 +190,7 @@ namespace DoAnOOP
             catch
             {
                 MessageBox.Show("Moi nhap Id la mot so nguyen");
+                return;
             }
             book = new qlyBook();
             member = new qlyMember();
