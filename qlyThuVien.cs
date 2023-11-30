@@ -44,6 +44,7 @@ namespace DoAnOOP
                         x += 1;
                         temp.Number = x;
                         db.SubmitChanges();
+                        Form1_Load(sender, e);
                         MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
                     }
                     else if (a.Name.CompareTo(temp.BookName) != 0)
@@ -60,6 +61,7 @@ namespace DoAnOOP
                     book.Number = 1;
                     db.qlyBooks.InsertOnSubmit(book);
                     db.SubmitChanges();
+                    Form1_Load(sender, e);
                     MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
                 }
             }
@@ -67,7 +69,6 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Loi dang trong qua trinh fix.");
             }
-            Form1_Load(sender, e);
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -142,9 +143,10 @@ namespace DoAnOOP
                     var l = (from k in db.qlyMembers where k.Id == mem.Id && k.BookCode == x select k).ToList();
                     if (l.Count > 0)
                     {
+                        MessageBox.Show("Co");
                         member = db.qlyMembers.Where(k => k.Id == mem.Id && k.BookCode == x).First();
                         int temp = (int)member.BookNumber;
-                        member.Number = temp + 1;
+                        member.BookNumber = temp + 1;
                         db.SubmitChanges();
                         MessageBox.Show("Da muon sach xong");
                         return;
