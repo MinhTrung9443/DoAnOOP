@@ -21,16 +21,18 @@ namespace DoAnOOP
 
         private void ViewMember_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'do_an_oopDataSet1.Member' table. You can move, or remove it, as needed.
-            this.memberTableAdapter.Fill(this.do_an_oopDataSet1.Member);
+            Librarian temp = new Librarian();
+            var list = temp.viewMemberDetails();
+            dataGridView1.DataSource = list;
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            string temp = string.Empty;
             if (textBox1.Text == "")
             {
-                var list = (from a in db.qlyMembers select a).ToList();
+                var list = (from a in db.qlyMembers where temp.CompareTo(a.Name) != 0 select a).ToList();
                 dataGridView1.DataSource = list;
             }
             else
@@ -44,7 +46,7 @@ namespace DoAnOOP
                 {
                     MessageBox.Show("Moi nhap vao id la mot so nguyen.");
                     textBox1.Text = "";
-                    var l = (from a in db.qlyMembers select a).ToList();
+                    var l = (from a in db.qlyMembers where temp.CompareTo(a.Name) != 0 select a).ToList();
                     dataGridView1.DataSource = l;
                 }
                 var list = (from a in db.qlyMembers where a.Id == t select a).ToList();

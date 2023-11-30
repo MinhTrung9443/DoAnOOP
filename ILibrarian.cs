@@ -7,8 +7,8 @@ namespace DoAnOOP
 {
     public interface ILibrarian
     {
-        void addBook(List<Book> list, Book a);
-        void viewMemberDetails();
-        string generateReport(List<Book> books);
+        void addBook(Book a);
+        List<qlyMember> viewMemberDetails();
+        string generateReport();
     }
 }

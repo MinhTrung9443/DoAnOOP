@@ -7,6 +7,6 @@ namespace DoAnOOP
 {
     public interface ISearch
     {
-        string searchBook();
+        List<qlyBook> searchBook(string a, string b);
     }
 }

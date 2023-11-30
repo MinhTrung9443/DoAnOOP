@@ -7,7 +7,7 @@ namespace DoAnOOP
 {
     public interface IMember
     {
-        void returnBook();
-        void issueBook();
+        void returnBook(string a, string b, Member mem);
+        void issueBook(string a,string b, Member mem);
     }
 }

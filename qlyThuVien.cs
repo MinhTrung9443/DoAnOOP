@@ -32,38 +32,9 @@ namespace DoAnOOP
             book = new qlyBook();
             try
             {
-                var list = (from k in db.qlyBooks where k.BookCode == a.BookCode select k).ToList();
-                if (list.Count > 0)
-                {
-                    qlyBook temp = new qlyBook();
-                    temp = db.qlyBooks.Where(s => s.BookCode == a.BookCode).Single();
-                    if (a.Name.CompareTo(temp.BookName) == 0 && a.Author.CompareTo(temp.Author) == 0
-                    && a.Date == temp.Date)
-                    {
-                        int x = (int)temp.Number;
-                        x += 1;
-                        temp.Number = x;
-                        db.SubmitChanges();
-                        Form1_Load(sender, e);
-                        MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
-                    }
-                    else if (a.Name.CompareTo(temp.BookName) != 0)
-                    {
-                        MessageBox.Show("Da ton tai ma sach.");
-                    }
-                }
-                else
-                {
-                    book.Author = a.Author;
-                    book.Date = a.Date;
-                    book.BookCode = a.BookCode;
-                    book.BookName = a.Name;
-                    book.Number = 1;
-                    db.qlyBooks.InsertOnSubmit(book);
-                    db.SubmitChanges();
-                    Form1_Load(sender, e);
-                    MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
-                }
+                Librarian temp = new Librarian();
+                temp.addBook(a);
+                Form1_Load(sender, e);
             }
             catch
             {
@@ -74,21 +45,13 @@ namespace DoAnOOP
         {
             Form_ttSach a = new Form_ttSach();
             a.truyen = new Form_ttSach.truyenDuLieu(add);
+            Form1_Load(sender, e);
             a.ShowDialog();
         }
         private void search(string a,string b)
         {
-            int temp;
-            try
-            {
-                temp = int.Parse(a);
-            }
-            catch
-            {
-                MessageBox.Show("Moi nhap ma sach la mot so nguyen.");
-                return;
-            }
-            var list = (from m in db.qlyBooks where m.BookCode == temp && m.BookName.CompareTo(b) == 0 select m).ToList();    
+            Librarian x = new Librarian();
+            var list = x.searchBook(a, b); 
             if (list.Count > 0)
             {
                 dataGridView1.DataSource = list;
@@ -112,67 +75,11 @@ namespace DoAnOOP
             a.truyen = new Form3.truyenDuLieu(search);
             a.ShowDialog();
         }
-
-        private void muonSach(string a, string b)
+        
+        private void muonSach(string a,string b)
         {
-            int x = new int();
-            try
-            {
-                x = int.Parse(a);
-            }
-            catch
-            {
-                MessageBox.Show("Moi nhap Id la mot so nguyen");
-                return;
-            }
-            book = new qlyBook();
-            var list = (from k in db.qlyBooks where k.BookCode == x && b.CompareTo(k.BookName) == 0 select k).ToList();
-            if (list.Count > 0)
-            {
-                book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
-                if ((int)book.Number == 0)
-                {
-                    MessageBox.Show("Sach da het");
-                    return;
-                }
-                else
-                {
-                    member = new qlyMember();
-                    int y = (int)book.Number - 1;
-                    book.Number = y;
-                    var l = (from k in db.qlyMembers where k.Id == mem.Id && k.BookCode == x select k).ToList();
-                    if (l.Count > 0)
-                    {
-                        MessageBox.Show("Co");
-                        member = db.qlyMembers.Where(k => k.Id == mem.Id && k.BookCode == x).First();
-                        int temp = (int)member.BookNumber;
-                        member.BookNumber = temp + 1;
-                        db.SubmitChanges();
-                        MessageBox.Show("Da muon sach xong");
-                        return;
-                    }
-                    else
-                    {
-                        member.Name = mem.Name;
-                        member.Address = mem.Address;
-                        member.Id = mem.Id;
-                        member.Number = mem.NumberContact;
-                        member.BookCode = book.BookCode;
-                        member.BookName = book.BookName;
-                        member.BookNumber = 1;
-                        member.stt = (int)db.qlyMembers.Max(k => k.stt) + 1;
-                        member.stt = (int)member.stt;
-                        db.qlyMembers.InsertOnSubmit(member);
-                        db.SubmitChanges();
-                        MessageBox.Show("Da muon sach xong");
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Khong ton tai sach trong thu vien");
-            }
+            Member temp = new Member();
+            temp.issueBook(a, b,(Member)mem);
         }
         private void btn_issue_Click(object sender, EventArgs e)
         {
@@ -184,71 +91,15 @@ namespace DoAnOOP
         }
         private void traSach(string a,string b)
         {
-            int x = new int();
-            try
-            {
-                x = int.Parse(a);
-            }
-            catch
-            {
-                MessageBox.Show("Moi nhap Id la mot so nguyen");
-                return;
-            }
-            book = new qlyBook();
-            member = new qlyMember();
-            var list = (from k in db.qlyMembers where k.BookCode == x && k.BookName.CompareTo(b) == 0 && mem.Name.CompareTo(k.Name) == 0 select k).ToList();
-            if (list.Count > 0)
-            {
-                book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
-                int temp = (int)book.Number;
-                book.Number = temp + 1;
-                member = db.qlyMembers.Where(s => s.BookCode == x).First();
-                addTraSach(member);
-                if ((int)member.Number > 1)
-                {
-                    int ta = (int)member.Number;
-                    member.Number = ta - 1;
-                }
-                else
-                {
-                    db.qlyMembers.DeleteOnSubmit(member);
-                }
-                db.SubmitChanges();
-                MessageBox.Show("Da tra sach xong");
-            }
-            else
-            {
-                MessageBox.Show("Khong tra sach duoc");
-            }
+            Member temp = new Member();
+            temp.returnBook(a, b, (Member)mem);
         }
-        private void addTraSach(qlyMember a)
-        {
-            sachtra = new qlytraSach();
-            var l = (from s in db.qlytraSaches where s.Id == a.Id && s.BookCode == a.BookCode select s).ToList();
-            if (l.Count == 0)
-            {
-                sachtra.Id = a.Id;
-                sachtra.Name = a.Name;
-                sachtra.Number = a.Number;
-                sachtra.Address = a.Address;
-                sachtra.BookCode = a.BookCode;
-                sachtra.BookName = a.BookName;
-                sachtra.BookNumber = 1;
-                sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt)+1;
-                db.qlytraSaches.InsertOnSubmit(sachtra);
-            }
-            else
-            {
-                sachtra = db.qlytraSaches.Where(s => s.Id == a.Id && s.BookCode == a.BookCode).First();
-                int temp = (int)sachtra.BookNumber;
-                sachtra.BookNumber = temp + 1;
-            }
-            db.SubmitChanges();
-        }
+
         private void btn_return_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
             Form3 a = new Form3();
+            
             a.truyen = new Form3.truyenDuLieu(traSach);
             a.ShowDialog();
             Form1_Load(sender,e);
@@ -266,13 +117,8 @@ namespace DoAnOOP
         /// <param name="e"></param>
         private void btn_report_Click(object sender, EventArgs e)
         {
-            TextWriter wtr = new StreamWriter("Report1.txt");
-            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName \t BookNumber \n");
-            foreach (qlyMember a in db.qlyMembers)
-            {
-                wtr.WriteLine(a.Id+ "\t" + a.Name + "\t\t" + a.Address + "\t\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" +a.BookNumber);
-            }
-            wtr.Close();
+            report a = new report();
+            a.ShowDialog();
         }
         private void thucthi(string a,string b)
         {
@@ -300,6 +146,11 @@ namespace DoAnOOP
                         lbl_hienThi.Visible = true;
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Tai khoan khong ton tai. Moi dang nhap lai.");
+                return;
             }
         }
         private void btn_signUp_Click(object sender, EventArgs e)

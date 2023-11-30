@@ -19,7 +19,7 @@ namespace DoAnOOP
 
         public abstract string printfDetail();
 
-        public abstract string searchBook();
+        public abstract List<qlyBook> searchBook(string a, string b);
 
         public Person(string nameValue, int numberValue, string addressValue, int idValue)
         {
