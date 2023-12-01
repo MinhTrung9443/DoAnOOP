@@ -17,7 +17,7 @@ namespace DoAnOOP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new qlyThuVien());
-            //
+            //Hong nhung gui Minh Trung
         }
     }
 }
