@@ -49,5 +49,10 @@ namespace DoAnOOP
             }
             Close();
         }
+
+        private void tbx_address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

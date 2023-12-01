@@ -99,5 +99,10 @@ namespace DoAnOOP
                 return;
             }
         }
+
+        private void lbl_bao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

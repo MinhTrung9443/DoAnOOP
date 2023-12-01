@@ -167,5 +167,15 @@ namespace DoAnOOP
             a.truyen = new Form3.truyenDuLieu(thucthi);
             a.ShowDialog();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

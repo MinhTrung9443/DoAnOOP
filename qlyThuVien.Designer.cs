@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(qlyThuVien));
             this.btn_signIn = new System.Windows.Forms.Button();
             this.btn_signUp = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
@@ -51,17 +52,24 @@
             this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
             this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.lbl_hienThi = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.grBox_libra.SuspendLayout();
             this.grBox_mem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_signIn
             // 
-            this.btn_signIn.Location = new System.Drawing.Point(245, 49);
+            this.btn_signIn.Location = new System.Drawing.Point(300, 57);
             this.btn_signIn.Name = "btn_signIn";
             this.btn_signIn.Size = new System.Drawing.Size(117, 46);
             this.btn_signIn.TabIndex = 0;
@@ -71,7 +79,7 @@
             // 
             // btn_signUp
             // 
-            this.btn_signUp.Location = new System.Drawing.Point(81, 49);
+            this.btn_signUp.Location = new System.Drawing.Point(93, 57);
             this.btn_signUp.Name = "btn_signUp";
             this.btn_signUp.Size = new System.Drawing.Size(117, 46);
             this.btn_signUp.TabIndex = 1;
@@ -81,9 +89,10 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(87, 40);
+            this.btn_add.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(72, 91);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(117, 46);
+            this.btn_add.Size = new System.Drawing.Size(117, 58);
             this.btn_add.TabIndex = 2;
             this.btn_add.Text = "Add Book";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -91,9 +100,10 @@
             // 
             // btn_viewMember
             // 
-            this.btn_viewMember.Location = new System.Drawing.Point(251, 40);
+            this.btn_viewMember.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewMember.Location = new System.Drawing.Point(245, 91);
             this.btn_viewMember.Name = "btn_viewMember";
-            this.btn_viewMember.Size = new System.Drawing.Size(117, 46);
+            this.btn_viewMember.Size = new System.Drawing.Size(117, 58);
             this.btn_viewMember.TabIndex = 3;
             this.btn_viewMember.Text = "View member";
             this.btn_viewMember.UseVisualStyleBackColor = true;
@@ -101,9 +111,10 @@
             // 
             // btn_report
             // 
-            this.btn_report.Location = new System.Drawing.Point(171, 122);
+            this.btn_report.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_report.Location = new System.Drawing.Point(72, 174);
             this.btn_report.Name = "btn_report";
-            this.btn_report.Size = new System.Drawing.Size(117, 46);
+            this.btn_report.Size = new System.Drawing.Size(117, 57);
             this.btn_report.TabIndex = 4;
             this.btn_report.Text = "Report";
             this.btn_report.UseVisualStyleBackColor = true;
@@ -111,9 +122,10 @@
             // 
             // btn_search_librarian
             // 
-            this.btn_search_librarian.Location = new System.Drawing.Point(171, 218);
+            this.btn_search_librarian.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_librarian.Location = new System.Drawing.Point(245, 174);
             this.btn_search_librarian.Name = "btn_search_librarian";
-            this.btn_search_librarian.Size = new System.Drawing.Size(117, 46);
+            this.btn_search_librarian.Size = new System.Drawing.Size(117, 57);
             this.btn_search_librarian.TabIndex = 5;
             this.btn_search_librarian.Text = "Search";
             this.btn_search_librarian.UseVisualStyleBackColor = true;
@@ -121,47 +133,58 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.btn_signUp);
             this.groupBox1.Controls.Add(this.btn_signIn);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(842, 48);
+            this.groupBox1.Location = new System.Drawing.Point(769, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(416, 131);
+            this.groupBox1.Size = new System.Drawing.Size(504, 253);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Login";
+            this.groupBox1.Text = "ĐĂNG NHẬP";
             // 
             // grBox_libra
             // 
+            this.grBox_libra.BackColor = System.Drawing.Color.SeaGreen;
             this.grBox_libra.Controls.Add(this.btn_search_librarian);
             this.grBox_libra.Controls.Add(this.btn_report);
             this.grBox_libra.Controls.Add(this.btn_viewMember);
             this.grBox_libra.Controls.Add(this.btn_add);
-            this.grBox_libra.Location = new System.Drawing.Point(842, 201);
+            this.grBox_libra.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBox_libra.Location = new System.Drawing.Point(822, 271);
             this.grBox_libra.Name = "grBox_libra";
             this.grBox_libra.Size = new System.Drawing.Size(416, 318);
             this.grBox_libra.TabIndex = 7;
             this.grBox_libra.TabStop = false;
+            this.grBox_libra.Text = "CÁC THAO TÁC";
             this.grBox_libra.Visible = false;
             // 
             // grBox_mem
             // 
+            this.grBox_mem.BackColor = System.Drawing.Color.SeaGreen;
+            this.grBox_mem.Controls.Add(this.btn_issue);
+            this.grBox_mem.Controls.Add(this.button1);
             this.grBox_mem.Controls.Add(this.btn_search_member);
             this.grBox_mem.Controls.Add(this.btn_return);
-            this.grBox_mem.Controls.Add(this.btn_issue);
-            this.grBox_mem.Location = new System.Drawing.Point(842, 232);
+            this.grBox_mem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBox_mem.Location = new System.Drawing.Point(818, 272);
             this.grBox_mem.Name = "grBox_mem";
-            this.grBox_mem.Size = new System.Drawing.Size(414, 317);
+            this.grBox_mem.Size = new System.Drawing.Size(434, 317);
             this.grBox_mem.TabIndex = 10;
             this.grBox_mem.TabStop = false;
+            this.grBox_mem.Text = "CÁC THAO TÁC";
             this.grBox_mem.Visible = false;
             // 
             // btn_search_member
             // 
-            this.btn_search_member.Location = new System.Drawing.Point(133, 180);
+            this.btn_search_member.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_member.Location = new System.Drawing.Point(50, 187);
             this.btn_search_member.Name = "btn_search_member";
-            this.btn_search_member.Size = new System.Drawing.Size(117, 46);
+            this.btn_search_member.Size = new System.Drawing.Size(139, 57);
             this.btn_search_member.TabIndex = 9;
             this.btn_search_member.Text = "Search";
             this.btn_search_member.UseVisualStyleBackColor = true;
@@ -169,9 +192,10 @@
             // 
             // btn_return
             // 
-            this.btn_return.Location = new System.Drawing.Point(214, 49);
+            this.btn_return.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_return.Location = new System.Drawing.Point(245, 76);
             this.btn_return.Name = "btn_return";
-            this.btn_return.Size = new System.Drawing.Size(117, 46);
+            this.btn_return.Size = new System.Drawing.Size(133, 61);
             this.btn_return.TabIndex = 7;
             this.btn_return.Text = "Return Book";
             this.btn_return.UseVisualStyleBackColor = true;
@@ -179,9 +203,10 @@
             // 
             // btn_issue
             // 
-            this.btn_issue.Location = new System.Drawing.Point(50, 49);
+            this.btn_issue.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_issue.Location = new System.Drawing.Point(50, 76);
             this.btn_issue.Name = "btn_issue";
-            this.btn_issue.Size = new System.Drawing.Size(117, 46);
+            this.btn_issue.Size = new System.Drawing.Size(139, 61);
             this.btn_issue.TabIndex = 6;
             this.btn_issue.Text = "Issue Book";
             this.btn_issue.UseVisualStyleBackColor = true;
@@ -198,12 +223,13 @@
             this.dateDataGridViewTextBoxColumn,
             this.numberDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 130);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 568);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 501);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.Tag = "";
             this.dataGridView1.Visible = false;
             // 
             // bookCodeDataGridViewTextBoxColumn
@@ -263,32 +289,91 @@
             // lbl_hienThi
             // 
             this.lbl_hienThi.AutoSize = true;
-            this.lbl_hienThi.Location = new System.Drawing.Point(839, 582);
+            this.lbl_hienThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lbl_hienThi.Location = new System.Drawing.Point(779, 599);
             this.lbl_hienThi.Name = "lbl_hienThi";
             this.lbl_hienThi.Size = new System.Drawing.Size(44, 16);
             this.lbl_hienThi.TabIndex = 11;
             this.lbl_hienThi.Text = "label1";
             this.lbl_hienThi.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1289, 631);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "THÔNG TIN SÁCH";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(245, 187);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 57);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(189, 118);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(435, 209);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(48, 26);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Exit";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // qlyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 629);
-            this.Controls.Add(this.lbl_hienThi);
+            this.ClientSize = new System.Drawing.Size(1288, 629);
             this.Controls.Add(this.grBox_mem);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_hienThi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grBox_libra);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "qlyThuVien";
             this.Text = "Quan ly thu vien";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.grBox_libra.ResumeLayout(false);
             this.grBox_mem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,6 +403,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lbl_hienThi;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
