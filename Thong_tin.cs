@@ -12,7 +12,7 @@ namespace DoAnOOP
 {
     public partial class Thong_tin : Form
     {
-        public delegate void truyenDuLieu(Member a, object sender, EventArgs e);
+        public delegate void truyenDuLieu(string a, string b, string c, string d);
         public truyenDuLieu truyen;
         public Thong_tin()
         {
@@ -45,14 +45,10 @@ namespace DoAnOOP
             }
             if (truyen != null && temp == 0)
             {
-                truyen(a, sender, e);
+                truyen(tbx_name.Text,tbx_id.Text,tbx_contact.Text,tbx_address.Text);
             }
             Close();
         }
 
-        private void tbx_address_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

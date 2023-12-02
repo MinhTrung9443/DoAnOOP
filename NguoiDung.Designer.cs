@@ -34,19 +34,19 @@
             this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.btn_exit = new System.Windows.Forms.Button();
             this.grBox_libra = new System.Windows.Forms.GroupBox();
-            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
-            this.doanoopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btn_issue = new System.Windows.Forms.Button();
             this.btn_search_member = new System.Windows.Forms.Button();
             this.btn_return = new System.Windows.Forms.Button();
+            this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
+            this.doanoopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_address = new System.Windows.Forms.Label();
             this.lbl_contact = new System.Windows.Forms.Label();
@@ -104,21 +104,6 @@
             this.grBox_libra.TabIndex = 15;
             this.grBox_libra.TabStop = false;
             // 
-            // do_an_oopDataSet
-            // 
-            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
-            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // doanoopDataSetBindingSource
-            // 
-            this.doanoopDataSetBindingSource.DataSource = this.do_an_oopDataSet;
-            this.doanoopDataSetBindingSource.Position = 0;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.doanoopDataSetBindingSource;
-            // 
             // btn_issue
             // 
             this.btn_issue.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,6 +137,21 @@
             this.btn_return.UseVisualStyleBackColor = true;
             this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
+            // do_an_oopDataSet
+            // 
+            this.do_an_oopDataSet.DataSetName = "Do_an_oopDataSet";
+            this.do_an_oopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // doanoopDataSetBindingSource
+            // 
+            this.doanoopDataSetBindingSource.DataSource = this.do_an_oopDataSet;
+            this.doanoopDataSetBindingSource.Position = 0;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "Book";
+            this.bookBindingSource.DataSource = this.doanoopDataSetBindingSource;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -170,11 +170,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(879, 482);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.Visible = false;
-            // 
-            // bookBindingSource1
-            // 
-            this.bookBindingSource1.DataMember = "Book";
-            this.bookBindingSource1.DataSource = this.do_an_oopDataSet;
             // 
             // bookCodeDataGridViewTextBoxColumn
             // 
@@ -215,6 +210,11 @@
             this.numberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
             this.numberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bookBindingSource1
+            // 
+            this.bookBindingSource1.DataMember = "Book";
+            this.bookBindingSource1.DataSource = this.do_an_oopDataSet;
             // 
             // groupBox1
             // 

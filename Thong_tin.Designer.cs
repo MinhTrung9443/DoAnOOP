@@ -51,7 +51,6 @@
             this.tbx_address.Name = "tbx_address";
             this.tbx_address.Size = new System.Drawing.Size(283, 33);
             this.tbx_address.TabIndex = 17;
-            this.tbx_address.TextChanged += new System.EventHandler(this.tbx_address_TextChanged);
             // 
             // tbx_contact
             // 
