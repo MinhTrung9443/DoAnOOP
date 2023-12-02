@@ -83,6 +83,7 @@
             // btn_OK
             // 
             this.btn_OK.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_OK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OK.Location = new System.Drawing.Point(174, 299);
             this.btn_OK.Name = "btn_OK";

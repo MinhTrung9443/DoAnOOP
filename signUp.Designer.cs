@@ -169,6 +169,7 @@
             // rbtn_lib
             // 
             this.rbtn_lib.AutoSize = true;
+            this.rbtn_lib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtn_lib.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_lib.Location = new System.Drawing.Point(231, 420);
             this.rbtn_lib.Name = "rbtn_lib";
@@ -181,6 +182,7 @@
             // rbtn_mem
             // 
             this.rbtn_mem.AutoSize = true;
+            this.rbtn_mem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtn_mem.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_mem.Location = new System.Drawing.Point(488, 420);
             this.rbtn_mem.Name = "rbtn_mem";
@@ -193,6 +195,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(314, 484);
             this.button1.Name = "button1";

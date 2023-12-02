@@ -86,6 +86,7 @@
             // btn_OK
             // 
             this.btn_OK.BackColor = System.Drawing.Color.Green;
+            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_OK.Location = new System.Drawing.Point(435, 388);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(132, 50);
@@ -130,8 +131,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Info;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(253, 25);
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(287, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(354, 25);
             this.label5.TabIndex = 9;
