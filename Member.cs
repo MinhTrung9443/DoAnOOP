@@ -27,8 +27,7 @@ namespace DoAnOOP
                 return;
             }
             book = new qlyBook();
-            var list = (from k in db.qlyBooks where k.BookCode == x && b.CompareTo(k.BookName) == 0 select k).ToList();
-            if (list.Count > 0)
+            try
             {
                 book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
                 if ((int)book.Number == 0)
@@ -41,8 +40,7 @@ namespace DoAnOOP
                     member = new qlyMember();
                     int y = (int)book.Number - 1;
                     book.Number = y;
-                    var l = (from k in db.qlyMembers where k.Id == mem.Id && k.BookCode == x select k).ToList();
-                    if (l.Count > 0)
+                    try
                     {
                         member = db.qlyMembers.Where(k => k.Id == mem.Id && k.BookCode == x).First();
                         int temp = (int)member.BookNumber;
@@ -51,7 +49,7 @@ namespace DoAnOOP
                         MessageBox.Show("Da muon sach xong");
                         return;
                     }
-                    else
+                    catch
                     {
                         member.Name = mem.Name;
                         member.Address = mem.Address;
@@ -69,7 +67,7 @@ namespace DoAnOOP
                     }
                 }
             }
-            else
+            catch
             {
                 MessageBox.Show("Khong ton tai sach trong thu vien");
             }
@@ -94,15 +92,14 @@ namespace DoAnOOP
             }
             book = new qlyBook();
             member = new qlyMember();
-            var list = (from k in db.qlyMembers where k.BookCode == x && k.BookName.CompareTo(b) == 0 && mem.Name.CompareTo(k.Name) == 0 select k).ToList();
-            if (list.Count > 0)
+            try
             {
                 book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
                 int temp = (int)book.Number;
                 book.Number = temp + 1;
                 member = db.qlyMembers.Where(s => s.BookCode == x).First();
                 addTraSach(member);
-                if ((int)member.Number > 1)
+                if ((int)member.BookNumber > 1)
                 {
                     int ta = (int)member.BookNumber;
                     member.BookNumber = ta - 1;
@@ -114,7 +111,7 @@ namespace DoAnOOP
                 db.SubmitChanges();
                 MessageBox.Show("Da tra sach xong");
             }
-            else
+            catch
             {
                 MessageBox.Show("Khong tra sach duoc");
             }
@@ -122,8 +119,7 @@ namespace DoAnOOP
         private void addTraSach(qlyMember a)
         {
             qlytraSach sachtra = new qlytraSach();
-            var l = (from s in db.qlytraSaches where s.Id == a.Id && s.BookCode == a.BookCode select s).ToList();
-            if (l.Count == 0)
+            try
             {
                 sachtra.Id = a.Id;
                 sachtra.Name = a.Name;
@@ -135,7 +131,7 @@ namespace DoAnOOP
                 sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt) + 1;
                 db.qlytraSaches.InsertOnSubmit(sachtra);
             }
-            else
+            catch
             {
                 sachtra = db.qlytraSaches.Where(s => s.Id == a.Id && s.BookCode == a.BookCode).First();
                 int temp = (int)sachtra.BookNumber;

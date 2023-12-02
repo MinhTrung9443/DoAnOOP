@@ -61,12 +61,12 @@ namespace DoAnOOP
             if (list.Count > 0)
             {
                 dataGridView1.DataSource = list;
+                dataGridView1.Visible = true;
             }
             else
             {
                 MessageBox.Show("Khong tim thay trong thu vien.");
             }
-            dataGridView1.Visible = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
