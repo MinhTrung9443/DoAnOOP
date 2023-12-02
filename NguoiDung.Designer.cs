@@ -52,6 +52,11 @@
             this.lbl_contact = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_ten = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grBox_libra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanoopDataSetBindingSource)).BeginInit();
@@ -59,13 +64,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-7, 176);
+            this.label1.Location = new System.Drawing.Point(12, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 18);
             this.label1.TabIndex = 18;
@@ -219,6 +225,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbl_address);
             this.groupBox1.Controls.Add(this.lbl_contact);
             this.groupBox1.Controls.Add(this.lbl_id);
@@ -234,7 +245,8 @@
             // lbl_address
             // 
             this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(759, 105);
+            this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_address.Location = new System.Drawing.Point(895, 105);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.Size = new System.Drawing.Size(102, 22);
             this.lbl_address.TabIndex = 3;
@@ -243,7 +255,8 @@
             // lbl_contact
             // 
             this.lbl_contact.AutoSize = true;
-            this.lbl_contact.Location = new System.Drawing.Point(340, 105);
+            this.lbl_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_contact.Location = new System.Drawing.Point(895, 44);
             this.lbl_contact.Name = "lbl_contact";
             this.lbl_contact.Size = new System.Drawing.Size(130, 22);
             this.lbl_contact.TabIndex = 2;
@@ -252,7 +265,8 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(340, 50);
+            this.lbl_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_id.Location = new System.Drawing.Point(483, 105);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(64, 22);
             this.lbl_id.TabIndex = 1;
@@ -261,11 +275,58 @@
             // lbl_ten
             // 
             this.lbl_ten.AutoSize = true;
-            this.lbl_ten.Location = new System.Drawing.Point(759, 50);
+            this.lbl_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_ten.Location = new System.Drawing.Point(483, 44);
             this.lbl_ten.Name = "lbl_ten";
             this.lbl_ten.Size = new System.Drawing.Size(71, 22);
             this.lbl_ten.TabIndex = 0;
             this.lbl_ten.Text = "hiện tên";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(369, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tên :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(379, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 22);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "ID :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(689, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 22);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Số điện thoại :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(689, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 22);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Địa chỉ :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // NguoiDung
             // 
@@ -286,6 +347,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +377,10 @@
         private System.Windows.Forms.Label lbl_contact;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label lbl_ten;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -38,7 +38,6 @@
             this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
             this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -48,7 +47,7 @@
             // 
             // btn_signIn
             // 
-            this.btn_signIn.Location = new System.Drawing.Point(146, 57);
+            this.btn_signIn.Location = new System.Drawing.Point(132, 263);
             this.btn_signIn.Name = "btn_signIn";
             this.btn_signIn.Size = new System.Drawing.Size(117, 46);
             this.btn_signIn.TabIndex = 0;
@@ -58,15 +57,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.groupBox1.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.btn_signIn);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(850, 12);
+            this.groupBox1.Location = new System.Drawing.Point(69, 208);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 358);
+            this.groupBox1.Size = new System.Drawing.Size(409, 373);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ĐĂNG NHẬP";
@@ -74,7 +73,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(215, 207);
+            this.linkLabel1.Location = new System.Drawing.Point(332, 327);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(48, 26);
             this.linkLabel1.TabIndex = 3;
@@ -85,9 +84,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(35, 118);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 90);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 99);
+            this.pictureBox2.Size = new System.Drawing.Size(159, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -116,14 +115,6 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // panelDesktopPane
-            // 
-            this.panelDesktopPane.Location = new System.Drawing.Point(0, 1);
-            this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(434, 327);
-            this.panelDesktopPane.TabIndex = 14;
-            this.panelDesktopPane.Visible = false;
-            // 
             // qlyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,7 +122,6 @@
             this.ClientSize = new System.Drawing.Size(1163, 687);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panelDesktopPane);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "qlyThuVien";
             this.Text = "Quan ly thu vien";
@@ -156,7 +146,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Panel panelDesktopPane;
     }
 }
 
