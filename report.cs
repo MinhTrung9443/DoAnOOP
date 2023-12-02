@@ -32,10 +32,10 @@ namespace DoAnOOP
         private void report1_Click(object sender, EventArgs e)
         {
             TextWriter wtr = new StreamWriter("Report1.txt");
-            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName \t BookNumber \n");
+            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t\tBookCode\tBookName \t    BookNumber \n");
             foreach (qlyMember a in db.qlyMembers)
             {
-                wtr.WriteLine(a.Id + "\t" + a.Name + "\t\t" + a.Address + "\t\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" + a.BookNumber);
+                wtr.WriteLine(a.Id + "\t" + a.Name + "\t\t" + a.Address + "\t\t   " + a.Number + "\t\t" + a.BookCode + "\t\t" + a.BookName + "\t\t" + a.BookNumber);
             }
             wtr.Close();
         }
@@ -43,10 +43,10 @@ namespace DoAnOOP
         private void report2_Click(object sender, EventArgs e)
         {
             TextWriter wtr = new StreamWriter("Report2.txt");
-            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName \t BookNumber \n");
+            wtr.WriteLine("Id \t Name  \t\t\t Address \t NumberContact \t BookCode \t BookName\t\tBookNumber \n");
             foreach (qlytraSach a in db.qlytraSaches)
             {
-                wtr.WriteLine(a.Id + "\t" + a.Name + "\t\t" + a.Address + "\t\t" + a.Number + "\t" + a.BookCode + "\t" + a.BookName + "\t" + a.BookNumber);
+                wtr.WriteLine(a.Id + "\t" + a.Name + "\t\t" + a.Address + "\t\t" + a.Number + "\t\t" + a.BookCode + "\t" + a.BookName + "\t\t" + a.BookNumber);
             }
             wtr.Close();
         }
