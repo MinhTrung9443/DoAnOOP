@@ -38,6 +38,7 @@
             this.do_an_oopDataSet = new DoAnOOP.Do_an_oopDataSet();
             this.bookTableAdapter = new DoAnOOP.Do_an_oopDataSetTableAdapters.BookTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -115,6 +116,13 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // panelDesktopPane
+            // 
+            this.panelDesktopPane.Location = new System.Drawing.Point(0, 0);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(249, 160);
+            this.panelDesktopPane.TabIndex = 13;
+            // 
             // qlyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -122,6 +130,7 @@
             this.ClientSize = new System.Drawing.Size(1163, 687);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panelDesktopPane);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "qlyThuVien";
             this.Text = "Quan ly thu vien";
@@ -146,6 +155,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Panel panelDesktopPane;
     }
 }
 
