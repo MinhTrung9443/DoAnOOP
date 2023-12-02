@@ -14,26 +14,25 @@ namespace DoAnOOP
         public Librarian(string nameValue, int numberValue, string addressValue, int idValue) : base(nameValue, numberValue, addressValue, idValue) { }
         public void addBook(Book a)
         {
-            var list = (from k in db.qlyBooks where k.BookCode == a.BookCode select k).ToList();
-            if (list.Count > 0)
+            book = new qlyBook();
+            try
             {
-                qlyBook temp = new qlyBook();
-                temp = db.qlyBooks.Where(s => s.BookCode == a.BookCode).Single();
-                if (a.Name.CompareTo(temp.BookName) == 0 && a.Author.CompareTo(temp.Author) == 0
-                && a.Date == temp.Date)
+                book = db.qlyBooks.Where(s => s.BookCode == a.BookCode).Single();
+                if (a.Name.CompareTo(book.BookName) == 0 && a.Author.CompareTo(book.Author) == 0
+                && a.Date == book.Date)
                 {
-                    int x = (int)temp.Number;
+                    int x = (int)book.Number;
                     x += 1;
-                    temp.Number = x;
+                    book.Number = x;
                     db.SubmitChanges();
                     MessageBox.Show("Thong tin sach: \n" + a.bookDetail(), "Them sach thanh cong.");
                 }
-                else if (a.Name.CompareTo(temp.BookName) != 0)
+                else if (a.Name.CompareTo(book.BookName) != 0)
                 {
                     MessageBox.Show("Da ton tai ma sach.");
                 }
             }
-            else
+            catch
             {
                 book.Author = a.Author;
                 book.Date = a.Date;
