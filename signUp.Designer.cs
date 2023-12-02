@@ -207,7 +207,7 @@
             this.lbl_bao.AutoSize = true;
             this.lbl_bao.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_bao.ForeColor = System.Drawing.Color.Red;
-            this.lbl_bao.Location = new System.Drawing.Point(724, 402);
+            this.lbl_bao.Location = new System.Drawing.Point(166, 255);
             this.lbl_bao.Name = "lbl_bao";
             this.lbl_bao.Size = new System.Drawing.Size(59, 22);
             this.lbl_bao.TabIndex = 33;

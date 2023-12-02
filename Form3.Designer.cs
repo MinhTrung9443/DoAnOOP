@@ -81,7 +81,7 @@
             this.btn_ok.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btn_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ok.Location = new System.Drawing.Point(186, 148);
+            this.btn_ok.Location = new System.Drawing.Point(193, 159);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(155, 42);
             this.btn_ok.TabIndex = 5;

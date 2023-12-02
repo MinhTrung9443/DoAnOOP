@@ -95,7 +95,7 @@
             this.bookNameDataGridViewTextBoxColumn,
             this.bookNumberDataGridViewTextBoxColumn});
             this.grid_muon.DataSource = this.memberBindingSource;
-            this.grid_muon.Location = new System.Drawing.Point(-2, 143);
+            this.grid_muon.Location = new System.Drawing.Point(23, 143);
             this.grid_muon.Name = "grid_muon";
             this.grid_muon.RowHeadersWidth = 51;
             this.grid_muon.RowTemplate.Height = 24;
@@ -196,11 +196,11 @@
             this.bookNameDataGridViewTextBoxColumn1,
             this.bookNumberDataGridViewTextBoxColumn1});
             this.grid_tra.DataSource = this.traSachBindingSource;
-            this.grid_tra.Location = new System.Drawing.Point(675, 143);
+            this.grid_tra.Location = new System.Drawing.Point(729, 143);
             this.grid_tra.Name = "grid_tra";
             this.grid_tra.RowHeadersWidth = 51;
             this.grid_tra.RowTemplate.Height = 24;
-            this.grid_tra.Size = new System.Drawing.Size(727, 210);
+            this.grid_tra.Size = new System.Drawing.Size(674, 210);
             this.grid_tra.TabIndex = 3;
             // 
             // idDataGridViewTextBoxColumn1
@@ -278,7 +278,7 @@
             this.report1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.report1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.report1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.report1.Location = new System.Drawing.Point(164, 419);
+            this.report1.Location = new System.Drawing.Point(248, 405);
             this.report1.Name = "report1";
             this.report1.Size = new System.Drawing.Size(169, 68);
             this.report1.TabIndex = 4;
@@ -291,7 +291,7 @@
             this.report2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.report2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.report2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.report2.Location = new System.Drawing.Point(1011, 408);
+            this.report2.Location = new System.Drawing.Point(1004, 405);
             this.report2.Name = "report2";
             this.report2.Size = new System.Drawing.Size(169, 65);
             this.report2.TabIndex = 5;
@@ -305,7 +305,7 @@
             this.report3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.report3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.report3.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.report3.Location = new System.Drawing.Point(608, 575);
+            this.report3.Location = new System.Drawing.Point(604, 592);
             this.report3.Name = "report3";
             this.report3.Size = new System.Drawing.Size(186, 66);
             this.report3.TabIndex = 6;
@@ -320,7 +320,7 @@
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(1299, 12);
+            this.btn_exit.Location = new System.Drawing.Point(796, 602);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 48);
             this.btn_exit.TabIndex = 7;
@@ -330,7 +330,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(533, 575);
+            this.pictureBox1.Location = new System.Drawing.Point(528, 609);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,9 +340,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-2, -16);
+            this.pictureBox2.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1404, 397);
+            this.pictureBox2.Size = new System.Drawing.Size(1445, 585);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -351,10 +351,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.Font = new System.Drawing.Font("STHupo", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(555, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 34);
+            this.label3.Size = new System.Drawing.Size(361, 38);
             this.label3.TabIndex = 10;
             this.label3.Text = "GENERATE REPORT";
             // 
@@ -363,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1402, 683);
+            this.ClientSize = new System.Drawing.Size(1455, 683);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.report3);

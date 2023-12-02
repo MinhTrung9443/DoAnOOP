@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Do_an_oopDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguoiDung.Designer.cs">
+      <DependentUpon>NguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="qlyThuVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +103,23 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="report.Designer.cs">
       <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="signUp.cs">
       <SubType>Form</SubType>
@@ -121,6 +139,9 @@
     <Compile Include="ViewMember.Designer.cs">
       <DependentUpon>ViewMember.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NguoiDung.resx">
+      <DependentUpon>NguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="qlyThuVien.resx">
       <DependentUpon>qlyThuVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +160,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="report.resx">
       <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
