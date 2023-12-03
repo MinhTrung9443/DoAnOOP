@@ -48,6 +48,7 @@
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.lbl_contact = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_ten = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.grBox_libra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanoopDataSetBindingSource)).BeginInit();
@@ -65,8 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +95,7 @@
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.Location = new System.Drawing.Point(0, 470);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(202, 55);
+            this.btn_exit.Size = new System.Drawing.Size(217, 55);
             this.btn_exit.TabIndex = 8;
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
@@ -106,9 +108,9 @@
             this.grBox_libra.Controls.Add(this.btn_return);
             this.grBox_libra.Controls.Add(this.btn_exit);
             this.grBox_libra.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBox_libra.Location = new System.Drawing.Point(956, 172);
+            this.grBox_libra.Location = new System.Drawing.Point(948, 150);
             this.grBox_libra.Name = "grBox_libra";
-            this.grBox_libra.Size = new System.Drawing.Size(202, 538);
+            this.grBox_libra.Size = new System.Drawing.Size(217, 560);
             this.grBox_libra.TabIndex = 15;
             this.grBox_libra.TabStop = false;
             // 
@@ -118,7 +120,7 @@
             this.btn_issue.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_issue.Location = new System.Drawing.Point(0, 25);
             this.btn_issue.Name = "btn_issue";
-            this.btn_issue.Size = new System.Drawing.Size(202, 61);
+            this.btn_issue.Size = new System.Drawing.Size(217, 61);
             this.btn_issue.TabIndex = 10;
             this.btn_issue.Text = "Issue Book";
             this.btn_issue.UseVisualStyleBackColor = true;
@@ -130,7 +132,7 @@
             this.btn_search_member.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search_member.Location = new System.Drawing.Point(0, 226);
             this.btn_search_member.Name = "btn_search_member";
-            this.btn_search_member.Size = new System.Drawing.Size(202, 57);
+            this.btn_search_member.Size = new System.Drawing.Size(217, 57);
             this.btn_search_member.TabIndex = 12;
             this.btn_search_member.Text = "Search";
             this.btn_search_member.UseVisualStyleBackColor = true;
@@ -142,7 +144,7 @@
             this.btn_return.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_return.Location = new System.Drawing.Point(0, 127);
             this.btn_return.Name = "btn_return";
-            this.btn_return.Size = new System.Drawing.Size(202, 61);
+            this.btn_return.Size = new System.Drawing.Size(217, 61);
             this.btn_return.TabIndex = 11;
             this.btn_return.Text = "Return Book";
             this.btn_return.UseVisualStyleBackColor = true;
@@ -248,10 +250,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG TIN NGƯỜI DÙNG";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(952, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(217, 155);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,25 +350,28 @@
             this.lbl_ten.TabIndex = 0;
             this.lbl_ten.Text = "hiện tên";
             // 
-            // pictureBox2
+            // pictureBox3
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(972, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 155);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(2, 150);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(948, 582);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
             // 
             // NguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 709);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1162, 727);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grBox_libra);
+            this.Controls.Add(this.pictureBox3);
+            this.DoubleBuffered = true;
             this.Name = "NguoiDung";
             this.Text = "NguoiDung";
             this.grBox_libra.ResumeLayout(false);
@@ -367,8 +382,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +420,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
