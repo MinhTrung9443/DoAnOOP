@@ -16,7 +16,7 @@ namespace DoAnOOP
         public chuyen truyen;
 
         Member mem = new Member();
-        database_DoAnDataContext db = new database_DoAnDataContext();
+        database_DoAnDataContext db;
         public NguoiDung(Member x)
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace DoAnOOP
         }
         private void NguoiDung_Load(object sender, EventArgs e)
         {
+            db = new database_DoAnDataContext();
             var l = (from a in db.qlyBooks select a).ToList();
             dataGridView1.DataSource = l;
         }

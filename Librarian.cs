@@ -9,11 +9,12 @@ namespace DoAnOOP
     public class Librarian : Person, ILibrarian
     {
         qlyBook book;
-        database_DoAnDataContext db = new database_DoAnDataContext();
+        database_DoAnDataContext db;
         public Librarian() { }
         public Librarian(string nameValue, int numberValue, string addressValue, int idValue) : base(nameValue, numberValue, addressValue, idValue) { }
         public void addBook(Book a)
         {
+            db = new database_DoAnDataContext();
             book = new qlyBook();
             try
             {
@@ -58,6 +59,7 @@ namespace DoAnOOP
 
         public override List<qlyBook> searchBook(string a,string b)
         {
+            db = new database_DoAnDataContext();
             int temp = new int();
             Librarian x = new Librarian();
             try
@@ -74,6 +76,7 @@ namespace DoAnOOP
 
         public List<qlyMember> viewMemberDetails()
         {
+            db = new database_DoAnDataContext();
             string temp = string.Empty;
             var list = (from a in db.qlyMembers where temp.CompareTo(a.Name) != 0 select a).ToList();
             return list;

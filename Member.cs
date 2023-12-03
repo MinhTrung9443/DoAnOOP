@@ -11,11 +11,13 @@ namespace DoAnOOP
     {
         qlyMember member;
         qlyBook book;
-        database_DoAnDataContext db = new database_DoAnDataContext();
+        database_DoAnDataContext db;
         public Member() { }
         public Member(string nameValue,int numberValue, string addressValue, int idValue) : base (nameValue,numberValue,addressValue,idValue) { }
         public void issueBook(string a,string b, Member mem)
         {
+            db = new database_DoAnDataContext();
+            book = new qlyBook();
             int x = new int();
             try
             {
@@ -26,7 +28,7 @@ namespace DoAnOOP
                 MessageBox.Show("Moi nhap Id la mot so nguyen");
                 return;
             }
-            book = new qlyBook();
+           
             try
             {
                 book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
@@ -80,6 +82,7 @@ namespace DoAnOOP
 
         public void returnBook(string a, string b, Member mem)
         {
+            db = new database_DoAnDataContext();
             int x = new int();
             try
             {
@@ -118,6 +121,7 @@ namespace DoAnOOP
         }
         private void addTraSach(qlyMember a)
         {
+            db = new database_DoAnDataContext();
             qlytraSach sachtra = new qlytraSach();
             try
             {
@@ -141,6 +145,7 @@ namespace DoAnOOP
         }
         public override List<qlyBook> searchBook(string a, string b)
         {
+            db = new database_DoAnDataContext();
             int temp = new int();
             Librarian x = new Librarian();
             try

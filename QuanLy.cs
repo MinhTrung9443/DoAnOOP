@@ -32,7 +32,6 @@ namespace DoAnOOP
             db = new database_DoAnDataContext();
             // TODO: This line of code loads data into the 'do_an_oopDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
-            
             var l = (from a in db.qlyBooks select a).ToList();
             dataGridView1.DataSource = l;
         }
