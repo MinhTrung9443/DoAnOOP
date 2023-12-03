@@ -16,7 +16,7 @@ namespace DoAnOOP
         public chuyen truyen;
         Librarian mem = new Librarian();
         qlyBook book;
-        database_DoAnDataContext db = new database_DoAnDataContext();
+        database_DoAnDataContext db;
         public QuanLy(Librarian x)
         {
             InitializeComponent();
@@ -29,10 +29,12 @@ namespace DoAnOOP
 
         private void QuanLy_Load(object sender, EventArgs e)
         {
+            db = new database_DoAnDataContext();
             // TODO: This line of code loads data into the 'do_an_oopDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
+            
             var l = (from a in db.qlyBooks select a).ToList();
-            dataGridView1.DataSource= l;
+            dataGridView1.DataSource = l;
         }
 
         private void add(Book a, object sender, EventArgs e)
@@ -41,16 +43,15 @@ namespace DoAnOOP
             try
             {
                 mem.addBook(a);
+                QuanLy_Load(sender, e);
             }
             catch
             {
                 MessageBox.Show("Loi dang trong qua trinh fix.");
             }
-            QuanLy_Load(sender, e);
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            QuanLy_Load(sender, e);
             Form_ttSach a = new Form_ttSach();
             a.truyen = new Form_ttSach.truyenDuLieu(add);
             a.ShowDialog();
