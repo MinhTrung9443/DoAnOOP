@@ -100,49 +100,54 @@ namespace DoAnOOP
                 book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
                 int temp = (int)book.Number;
                 book.Number = temp + 1;
-                member = db.qlyMembers.Where(s => s.BookCode == x).First();
-                addTraSach(member);
-                if ((int)member.BookNumber > 1)
+
+                try
                 {
+                    member = db.qlyMembers.Where(s => (int)s.BookCode == x && mem.Name.CompareTo(s.Name) ==0).First();
+                    qlytraSach sachtra = new qlytraSach();
+                    try
+                    {
+                        sachtra = db.qlytraSaches.Where(s => s.Id == mem.Id && (int)s.BookCode == x).First();
+                        int m = (int)sachtra.BookNumber;
+                        sachtra.BookNumber = m + 1;
+
+                    }
+                    catch
+                    {
+                        sachtra.Id = member.Id;
+                        sachtra.Name = member.Name;
+                        sachtra.Number = member.Number;
+                        sachtra.Address = member.Address;
+                        sachtra.BookCode = member.BookCode;
+                        sachtra.BookName = member.BookName;
+                        sachtra.BookNumber = 1;
+                        sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt) + 1;
+                        db.qlytraSaches.InsertOnSubmit(sachtra);
+                    }
+
                     int ta = (int)member.BookNumber;
-                    member.BookNumber = ta - 1;
+                    if (ta > 1)
+                    {
+                        member.BookNumber = ta - 1;
+                    }
+                    else
+                    {
+                        db.qlyMembers.DeleteOnSubmit(member);
+                    }
+                    db.SubmitChanges();
+                    MessageBox.Show("Da tra sach xong");
                 }
-                else
+                catch
                 {
-                    db.qlyMembers.DeleteOnSubmit(member);
+                    MessageBox.Show("Ban chua muon sach nay.");
                 }
-                db.SubmitChanges();
-                MessageBox.Show("Da tra sach xong");
             }
             catch
             {
                 MessageBox.Show("Khong tra sach duoc");
             }
         }
-        private void addTraSach(qlyMember a)
-        {
-            db = new database_DoAnDataContext();
-            qlytraSach sachtra = new qlytraSach();
-            try
-            {
-                sachtra.Id = a.Id;
-                sachtra.Name = a.Name;
-                sachtra.Number = a.Number;
-                sachtra.Address = a.Address;
-                sachtra.BookCode = a.BookCode;
-                sachtra.BookName = a.BookName;
-                sachtra.BookNumber = 1;
-                sachtra.stt = (int)db.qlytraSaches.Max(s => s.stt) + 1;
-                db.qlytraSaches.InsertOnSubmit(sachtra);
-            }
-            catch
-            {
-                sachtra = db.qlytraSaches.Where(s => s.Id == a.Id && s.BookCode == a.BookCode).First();
-                int temp = (int)sachtra.BookNumber;
-                sachtra.BookNumber = temp + 1;
-            }
-            db.SubmitChanges();
-        }
+
         public override List<qlyBook> searchBook(string a, string b)
         {
             db = new database_DoAnDataContext();
