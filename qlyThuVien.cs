@@ -28,16 +28,14 @@ namespace DoAnOOP
             // TODO: This line of code loads data into the 'do_an_oopDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
         }
-        private void OpenChildForm(System.Windows.Forms.Form childForm)
+        private void OpenChildForm(Form childForm)
         {
-
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             panelDesktopPane.Controls.Add(childForm);
             panelDesktopPane.Tag = childForm;
             panelDesktopPane.Size = childForm.Size;
-            panelDesktopPane.Visible = true;
             panelDesktopPane.BringToFront();
             childForm.Show();
         }

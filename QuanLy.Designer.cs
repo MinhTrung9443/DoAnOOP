@@ -71,6 +71,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookCodeDataGridViewTextBoxColumn,
@@ -79,11 +80,12 @@
             this.dateDataGridViewTextBoxColumn,
             this.numberDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 268);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 200);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(889, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(889, 308);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.Tag = "";
             // 
@@ -93,6 +95,7 @@
             this.bookCodeDataGridViewTextBoxColumn.HeaderText = "BookCode";
             this.bookCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookCodeDataGridViewTextBoxColumn.Name = "bookCodeDataGridViewTextBoxColumn";
+            this.bookCodeDataGridViewTextBoxColumn.ReadOnly = true;
             this.bookCodeDataGridViewTextBoxColumn.Width = 125;
             // 
             // bookNameDataGridViewTextBoxColumn
@@ -101,6 +104,7 @@
             this.bookNameDataGridViewTextBoxColumn.HeaderText = "BookName";
             this.bookNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
+            this.bookNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.bookNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // authorDataGridViewTextBoxColumn
@@ -109,6 +113,7 @@
             this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
             this.authorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
             this.authorDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateDataGridViewTextBoxColumn
@@ -117,6 +122,7 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn.Width = 125;
             // 
             // numberDataGridViewTextBoxColumn
@@ -125,6 +131,7 @@
             this.numberDataGridViewTextBoxColumn.HeaderText = "Number";
             this.numberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.ReadOnly = true;
             this.numberDataGridViewTextBoxColumn.Width = 125;
             // 
             // bookBindingSource
@@ -227,7 +234,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 224);
+            this.label1.Location = new System.Drawing.Point(12, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 18);
             this.label1.TabIndex = 14;
