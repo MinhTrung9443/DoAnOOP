@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DoAnOOP.Person">
+  <Class Name="DoAnOOP.Person" Collapsed="true">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAACAAAAAAAAAAAAAAQAAAIEgIACAIAAAAAAAgA=</HashCode>
@@ -8,45 +8,115 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DoAnOOP.Librarian">
-    <Position X="6" Y="0.75" Width="1.5" />
+  <Class Name="DoAnOOP.Librarian" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACACAAIAAAABAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACACAQIAAAABAAQAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Librarian.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DoAnOOP.Member">
-    <Position X="2.25" Y="1" Width="1.5" />
+  <Class Name="DoAnOOP.Member" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAABQAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAQAAAAAAAAQAAAAAAAAIAACAAAABQAAAA=</HashCode>
       <FileName>Member.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DoAnOOP.Book">
+  <Class Name="DoAnOOP.Book" Collapsed="true">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAQAAAgEAAAIQAAAAEAAABAAAAAQIAABA=</HashCode>
       <FileName>Book.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="DoAnOOP.ISearch">
+  <Class Name="DoAnOOP.Program" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.Form_ttSach" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAKAAARAAAACAAAACAEAAAAAAAAAAAABABAA=</HashCode>
+      <FileName>Form_ttSach.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.Form3" Collapsed="true">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQBAAAQCCABACAEAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Form3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.qlyThuVien" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAICDAAACAQAAAAAISAQQgCAAGgAAAACKSAAABAAAE=</HashCode>
+      <FileName>qlyThuVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.NguoiDung" Collapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERBACBQAACAQAJAAAACREQCCAEiAAAKAACDAGDhAAAE=</HashCode>
+      <FileName>NguoiDung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.QuanLy" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UQFACBAAACMQAJAAABCQQQiCAEiAAAIBICDAADhCCAA=</HashCode>
+      <FileName>QuanLy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.report" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICADoAACgQABEAAAyQAASCQIQHAAABAABACKhAAAA=</HashCode>
+      <FileName>report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.SignIn" Collapsed="true">
+    <Position X="2" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAKAAABAAAAyAgAACAEAkAAAAAAEAAABAAAA=</HashCode>
+      <FileName>SignIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.ViewMember" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAACAQCBAAAACAAAQSAAwMAAAAEEBACKhAAAA=</HashCode>
+      <FileName>ViewMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.signUp" Collapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAKAQABABAQCCAAACAEgIQAAAAGIEAAhAEBA=</HashCode>
+      <FileName>signUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DoAnOOP.ISearch" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISearch.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="DoAnOOP.ILibrarian">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Interface Name="DoAnOOP.ILibrarian" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ILibrarian.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="DoAnOOP.IMember">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+  <Interface Name="DoAnOOP.IMember" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAA=</HashCode>
       <FileName>IMember.cs</FileName>
