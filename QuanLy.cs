@@ -96,5 +96,6 @@ namespace DoAnOOP
             report a = new report();
             a.ShowDialog();
         }
+
     }
 }

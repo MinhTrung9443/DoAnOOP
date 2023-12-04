@@ -49,7 +49,6 @@
             this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_ten = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grBox_libra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_oopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanoopDataSetBindingSource)).BeginInit();
@@ -67,8 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +93,7 @@
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(0, 470);
+            this.btn_exit.Location = new System.Drawing.Point(0, 483);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(217, 55);
             this.btn_exit.TabIndex = 8;
@@ -233,8 +233,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -261,20 +261,11 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(595, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 22);
@@ -284,7 +275,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(595, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 22);
@@ -294,7 +286,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(290, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 22);
@@ -304,7 +297,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(290, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 22);
@@ -315,6 +309,7 @@
             // 
             this.lbl_address.AutoSize = true;
             this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_address.ForeColor = System.Drawing.Color.Black;
             this.lbl_address.Location = new System.Drawing.Point(776, 105);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.Size = new System.Drawing.Size(102, 22);
@@ -325,6 +320,7 @@
             // 
             this.lbl_contact.AutoSize = true;
             this.lbl_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_contact.ForeColor = System.Drawing.Color.Black;
             this.lbl_contact.Location = new System.Drawing.Point(776, 44);
             this.lbl_contact.Name = "lbl_contact";
             this.lbl_contact.Size = new System.Drawing.Size(130, 22);
@@ -335,6 +331,7 @@
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_id.ForeColor = System.Drawing.Color.Black;
             this.lbl_id.Location = new System.Drawing.Point(386, 105);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(64, 22);
@@ -345,6 +342,7 @@
             // 
             this.lbl_ten.AutoSize = true;
             this.lbl_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_ten.ForeColor = System.Drawing.Color.Black;
             this.lbl_ten.Location = new System.Drawing.Point(386, 44);
             this.lbl_ten.Name = "lbl_ten";
             this.lbl_ten.Size = new System.Drawing.Size(71, 22);
@@ -356,17 +354,27 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(2, 150);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(948, 582);
+            this.pictureBox3.Size = new System.Drawing.Size(948, 538);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(65, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // NguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1162, 727);
+            this.ClientSize = new System.Drawing.Size(1162, 687);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -384,8 +392,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,8 +427,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

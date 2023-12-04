@@ -42,31 +42,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(381, 198);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(385, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 22);
+            this.label1.Size = new System.Drawing.Size(78, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sách";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(381, 280);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 22);
+            this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sách";
             // 
             // tbx_bookName
             // 
-            this.tbx_bookName.Location = new System.Drawing.Point(514, 276);
-            this.tbx_bookName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbx_bookName.Location = new System.Drawing.Point(502, 278);
+            this.tbx_bookName.Margin = new System.Windows.Forms.Padding(4);
             this.tbx_bookName.Multiline = true;
             this.tbx_bookName.Name = "tbx_bookName";
             this.tbx_bookName.Size = new System.Drawing.Size(182, 26);
@@ -74,8 +76,8 @@
             // 
             // tbx_bookcode
             // 
-            this.tbx_bookcode.Location = new System.Drawing.Point(514, 190);
-            this.tbx_bookcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbx_bookcode.Location = new System.Drawing.Point(502, 187);
+            this.tbx_bookcode.Margin = new System.Windows.Forms.Padding(4);
             this.tbx_bookcode.Multiline = true;
             this.tbx_bookcode.Name = "tbx_bookcode";
             this.tbx_bookcode.Size = new System.Drawing.Size(182, 30);
@@ -83,12 +85,12 @@
             // 
             // btn_ok
             // 
-            this.btn_ok.BackColor = System.Drawing.Color.Navy;
+            this.btn_ok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btn_ok.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ok.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_ok.Location = new System.Drawing.Point(456, 364);
-            this.btn_ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ok.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(129, 50);
             this.btn_ok.TabIndex = 5;
@@ -101,7 +103,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(343, 479);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +135,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "Nhập thông tin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
