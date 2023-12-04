@@ -47,28 +47,25 @@ namespace DoAnOOP
         }
         private void thucthi(string a,string b)
         {
-            var l = (from s in db.qlyLogins where a.CompareTo(s.TenDangNhap) == 0 && b.CompareTo(s.Key) == 0 select s).ToList();    
-            if (l.Count == 1)
+            try
             {
-                foreach(qlyLogin t in l)
+                qlyLogin t = db.qlyLogins.Where(s => a.CompareTo(s.TenDangNhap) == 0 && b.CompareTo(s.Key) == 0).First();
+                if ((int)t.check == 1)
                 {
-                    if (t.check == 1)
-                    {
-                        mem = new Librarian(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
-                        QuanLy m = new QuanLy((Librarian)mem);
-                        m.truyen = new QuanLy.chuyen(an);
-                        OpenChildForm(m);
-                    }
-                    else
-                    {
-                        mem = new Member(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
-                        NguoiDung m = new NguoiDung((Member)mem);
-                        m.truyen = new NguoiDung.chuyen(an);
-                        OpenChildForm(m);
-                    }
+                    mem = new Librarian(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
+                    QuanLy m = new QuanLy((Librarian)mem);
+                    m.truyen = new QuanLy.chuyen(an);
+                    OpenChildForm(m);
+                }
+                else
+                {
+                    mem = new Member(t.Name, (int)t.NumberContact, t.Address, (int)t.Id);
+                    NguoiDung m = new NguoiDung((Member)mem);
+                    m.truyen = new NguoiDung.chuyen(an);
+                    OpenChildForm(m);
                 }
             }
-            else
+            catch
             {
                 MessageBox.Show("Tai khoan khong ton tai. Moi dang nhap lai.");
                 return;
@@ -88,9 +85,5 @@ namespace DoAnOOP
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
