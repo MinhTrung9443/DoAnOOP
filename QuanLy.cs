@@ -55,7 +55,7 @@ namespace DoAnOOP
             a.truyen = new Form_ttSach.truyenDuLieu(add);
             a.ShowDialog();
         }
-        private void search(string a, string b)
+        private void search(string a, string b, object sender, EventArgs e)
         {
             var list = mem.searchBook(a, b);
             if (list.Count > 0)

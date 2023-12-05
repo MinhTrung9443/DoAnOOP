@@ -12,7 +12,7 @@ namespace DoAnOOP
 {
     public partial class Form3 : Form
     {
-        public delegate void truyenDuLieu(string a,string b);
+        public delegate void truyenDuLieu(string a,string b, object sender, EventArgs e);
         public truyenDuLieu truyen;
         public Form3()
         {
@@ -22,7 +22,7 @@ namespace DoAnOOP
         {
             if (truyen != null)
             {
-                truyen(tbx_bookcode.Text,tbx_bookName.Text);
+                truyen(tbx_bookcode.Text,tbx_bookName.Text,sender,e);
             }
             Close();
         }

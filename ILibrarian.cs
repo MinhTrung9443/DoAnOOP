@@ -9,6 +9,6 @@ namespace DoAnOOP
     {
         void addBook(Book a);
         List<qlyMember> viewMemberDetails();
-        string generateReport();
+        void generateReport();
     }
 }

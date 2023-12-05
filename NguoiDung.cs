@@ -20,6 +20,7 @@ namespace DoAnOOP
         public NguoiDung(Member x)
         {
             InitializeComponent();
+            this.bookTableAdapter.Fill(this.do_an_oopDataSet.Book);
             mem = x;
             lbl_ten.Text = mem.Name;
             lbl_id.Text = mem.Id.ToString();
@@ -40,9 +41,10 @@ namespace DoAnOOP
             }
             Close();
         }
-        private void traSach(string a, string b)
+        private void traSach(string a, string b, object sender, EventArgs e)
         {
             mem.returnBook(a, b, mem);
+            NguoiDung_Load(sender, e);
         }
         private void btn_return_Click(object sender, EventArgs e)
         {
@@ -53,7 +55,7 @@ namespace DoAnOOP
             a.Show();
         }
 
-        private void search(string a, string b)
+        private void search(string a, string b, object sender, EventArgs e)
         {
             var list = mem.searchBook(a, b);
             if (list.Count > 0)
@@ -73,9 +75,10 @@ namespace DoAnOOP
             a.truyen = new Form3.truyenDuLieu(search);
             a.ShowDialog();
         }
-        private void muonSach(string a, string b)
+        private void muonSach(string a, string b, object sender, EventArgs e)
         {
             mem.issueBook(a, b, mem);
+            NguoiDung_Load(sender, e);
         }
         private void btn_issue_Click(object sender, EventArgs e)
         {
@@ -84,7 +87,6 @@ namespace DoAnOOP
             Form3 a = new Form3();
             a.truyen = new Form3.truyenDuLieu(muonSach);
             a.Show();
-
         }
     }
 }

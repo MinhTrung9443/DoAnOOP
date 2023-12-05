@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -46,9 +47,32 @@ namespace DoAnOOP
             }
         }
 
-        public string generateReport()
+        public void generateReport()
         {
-            return "'";
+            TextWriter wtr = new StreamWriter("Report.txt");
+            wtr.WriteLine("Danh sach sach con lai trong thu vien.");
+            wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10}\n", "Ma sach", "Ten sach", "Tac gia", "Ngay xuat ban", "So sach con lai");
+            foreach (qlyBook a in db.qlyBooks)
+            {
+                DateTime t = (DateTime)a.Date;
+                string temp = t.Day + "/" + t.Month + "/" + t.Year;
+                wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10}", a.BookCode, a.BookName, a.Author, temp, a.Number);
+            }
+            wtr.WriteLine("\n");
+            wtr.WriteLine("Danh sach nguoi dung dang muon sach.");
+            wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10} {5,-20} {6,-10}", "Id", "Name", "Address", "NumberContact", "BookCode", "BookName", "BookNumber");
+            foreach (qlyMember a in db.qlyMembers)
+            {
+                wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10} {5,-20} {6,-10}", a.Id, a.Name, a.Address, a.Number, a.BookCode, a.BookName, a.BookNumber);
+            }
+            wtr.WriteLine("\n");
+            wtr.WriteLine("Danh sach nguoi dung da tra sach.");
+            wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10} {5,-20} {6,-10}", "Id", "Name", "Address", "NumberContact", "BookCode", "BookName", "BookNumber");
+            foreach (qlytraSach a in db.qlytraSaches)
+            {
+                wtr.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20} {4,-10} {5,-20} {6,-10}", a.Id, a.Name, a.Address, a.Number, a.BookCode, a.BookName, a.BookNumber);
+            }
+            wtr.Close();
         }
 
         public override string printfDetail()
