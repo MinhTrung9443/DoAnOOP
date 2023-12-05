@@ -47,7 +47,6 @@ namespace DoAnOOP
         private void btn_return_Click(object sender, EventArgs e)
         {
             label1.Visible = false;
-            dataGridView1.Visible = false;
             Form3 a = new Form3();
 
             a.truyen = new Form3.truyenDuLieu(traSach);
@@ -83,7 +82,6 @@ namespace DoAnOOP
         private void btn_issue_Click(object sender, EventArgs e)
         {
             label1.Visible = false;
-            dataGridView1.Visible = false;
             Form3 a = new Form3();
             a.truyen = new Form3.truyenDuLieu(muonSach);
             a.ShowDialog();
