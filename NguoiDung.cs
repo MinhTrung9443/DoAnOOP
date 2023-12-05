@@ -48,10 +48,9 @@ namespace DoAnOOP
         {
             label1.Visible = false;
             Form3 a = new Form3();
-
-            a.truyen = new Form3.truyenDuLieu(traSach);
-            a.ShowDialog();
             NguoiDung_Load(sender, e);
+            a.truyen = new Form3.truyenDuLieu(traSach);
+            a.Show();
         }
 
         private void search(string a, string b)
@@ -67,7 +66,6 @@ namespace DoAnOOP
                 return;
             }
             label1.Visible = true;
-            dataGridView1.Visible = true;
         }
         private void btn_search_member_Click(object sender, EventArgs e)
         {
@@ -82,12 +80,11 @@ namespace DoAnOOP
         private void btn_issue_Click(object sender, EventArgs e)
         {
             label1.Visible = false;
-            dataGridView1.Visible = true;
             NguoiDung_Load(sender, e);
             Form3 a = new Form3();
             a.truyen = new Form3.truyenDuLieu(muonSach);
-            a.ShowDialog();
-            NguoiDung_Load(sender, e);
+            a.Show();
+
         }
     }
 }
