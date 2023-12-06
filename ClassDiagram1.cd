@@ -45,11 +45,11 @@
       <FileName>Form_ttSach.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DoAnOOP.Form3" Collapsed="true">
+  <Class Name="DoAnOOP.NhapTT" Collapsed="true">
     <Position X="4" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAQBAAAQCCABACAEAAAAAAAAAAAABAAAA=</HashCode>
-      <FileName>Form3.cs</FileName>
+      <FileName>NhapTT.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DoAnOOP.qlyThuVien" Collapsed="true">
@@ -62,21 +62,21 @@
   <Class Name="DoAnOOP.NguoiDung" Collapsed="true">
     <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ERBACBQAACAQAJAAAACREQCCAEiAAAKAACDAGDhAAAE=</HashCode>
+      <HashCode>ERBACBQAACAQAJAQAACREQCCAEiAAAKAACDAGDhAAAE=</HashCode>
       <FileName>NguoiDung.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DoAnOOP.QuanLy" Collapsed="true">
     <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>UQFACBAAACMQAJAAABCQQQiCAEiAAAIBICDAADhCCAA=</HashCode>
+      <HashCode>UQFACBAAACMQAJAQABCQQQiCAEiAAAIBICDAADhCCAA=</HashCode>
       <FileName>QuanLy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DoAnOOP.report" Collapsed="true">
     <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAICADoAACgQABEAAAyQAASCQIQHAAABAABACKhAAAA=</HashCode>
+      <HashCode>AAICADoAACgQEBEAAAyQAASCQIQHAAABAABACKhAAAA=</HashCode>
       <FileName>report.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,6 +99,13 @@
     <TypeIdentifier>
       <HashCode>ABAAAAAAAKAQABABAQCCAAACAEgIQAAAAGIEAAhAEBA=</HashCode>
       <FileName>signUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAnOOP.Search" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEQBAAAQCSABCCAAAAAAAAAAAAAABcAAA=</HashCode>
+      <FileName>Search.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="DoAnOOP.ISearch" Collapsed="true">

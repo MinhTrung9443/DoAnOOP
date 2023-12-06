@@ -100,7 +100,6 @@ namespace DoAnOOP
                 book = db.qlyBooks.Where(s => s.BookCode == x && b.CompareTo(s.BookName) == 0).First();
                 int temp = (int)book.Number;
                 book.Number = temp + 1;
-
                 try
                 {
                     member = db.qlyMembers.Where(s => (int)s.BookCode == x && mem.Name.CompareTo(s.Name) ==0).First();
@@ -110,7 +109,6 @@ namespace DoAnOOP
                         sachtra = db.qlytraSaches.Where(s => s.Id == mem.Id && (int)s.BookCode == x).First();
                         int m = (int)sachtra.BookNumber;
                         sachtra.BookNumber = m + 1;
-
                     }
                     catch
                     {
@@ -144,7 +142,7 @@ namespace DoAnOOP
             }
             catch
             {
-                MessageBox.Show("Khong tra sach duoc");
+                MessageBox.Show("Khong ton tai sach nay trong thu vien.");
             }
         }
 

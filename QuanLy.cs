@@ -55,19 +55,6 @@ namespace DoAnOOP
             a.truyen = new Form_ttSach.truyenDuLieu(add);
             a.ShowDialog();
         }
-        private void search(string a, string b, object sender, EventArgs e)
-        {
-            var list = mem.searchBook(a, b);
-            if (list.Count > 0)
-            {
-                dataGridView1.DataSource = list;
-                dataGridView1.Visible = true;
-            }
-            else
-            {
-                MessageBox.Show("Khong tim thay trong thu vien.");
-            }
-        }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {

@@ -49,9 +49,9 @@ namespace DoAnOOP
         private void btn_return_Click(object sender, EventArgs e)
         {
             label1.Visible = false;
-            Form3 a = new Form3();
+            NhapTT a = new NhapTT();
             NguoiDung_Load(sender, e);
-            a.truyen = new Form3.truyenDuLieu(traSach);
+            a.truyen = new NhapTT.truyenDuLieu(traSach);
             a.Show();
         }
 
@@ -113,8 +113,8 @@ namespace DoAnOOP
         {
             label1.Visible = false;
             NguoiDung_Load(sender, e);
-            Form3 a = new Form3();
-            a.truyen = new Form3.truyenDuLieu(muonSach);
+            NhapTT a = new NhapTT();
+            a.truyen = new NhapTT.truyenDuLieu(muonSach);
             a.Show();
         }
     }

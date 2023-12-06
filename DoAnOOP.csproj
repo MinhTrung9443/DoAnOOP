@@ -89,11 +89,11 @@
     <Compile Include="Form_ttSach.Designer.cs">
       <DependentUpon>Form_ttSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="NhapTT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="NhapTT.Designer.cs">
+      <DependentUpon>NhapTT.cs</DependentUpon>
     </Compile>
     <Compile Include="ILibrarian.cs" />
     <Compile Include="IMember.cs" />
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Form_ttSach.resx">
       <DependentUpon>Form_ttSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="NhapTT.resx">
+      <DependentUpon>NhapTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

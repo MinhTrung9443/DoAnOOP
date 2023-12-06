@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnOOP
 {
-    public partial class Form3 : Form
+    public partial class NhapTT : Form
     {
         public delegate void truyenDuLieu(string a,string b, object sender, EventArgs e);
         public truyenDuLieu truyen;
-        public Form3()
+        public NhapTT()
         {
             InitializeComponent();
         }
