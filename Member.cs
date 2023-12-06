@@ -12,7 +12,7 @@ namespace DoAnOOP
         qlyMember member;
         qlyBook book;
         database_DoAnDataContext db;
-        public Member() { }
+        public Member() : base() { }
         public Member(string nameValue,int numberValue, string addressValue, int idValue) : base (nameValue,numberValue,addressValue,idValue) { }
         public void issueBook(string a,string b, Member mem)
         {
