@@ -98,6 +98,22 @@ namespace DoAnOOP
             return list;
         }
 
+        public List<qlyBook> searchBook(int temp)
+        {
+            db = new database_DoAnDataContext();
+            Librarian x = new Librarian();
+            var list = (from m in db.qlyBooks where m.BookCode == temp  select m).ToList();
+            return list;
+        }
+
+        public List<qlyBook> searchBook(string b)
+        {
+            db = new database_DoAnDataContext();
+            Librarian x = new Librarian();
+            var list = (from m in db.qlyBooks where m.BookName.CompareTo(b) == 0 select m).ToList();
+            return list;
+        }
+
         public List<qlyMember> viewMemberDetails()
         {
             db = new database_DoAnDataContext();
