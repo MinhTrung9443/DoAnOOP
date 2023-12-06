@@ -150,7 +150,6 @@ namespace DoAnOOP
         {
             db = new database_DoAnDataContext();
             int temp = new int();
-            Librarian x = new Librarian();
             try
             {
                 temp = int.Parse(a);
@@ -165,7 +164,6 @@ namespace DoAnOOP
         public List<qlyBook> searchBook(int temp)
         {
             db = new database_DoAnDataContext();
-            Librarian x = new Librarian();
             var list = (from m in db.qlyBooks where m.BookCode == temp select m).ToList();
             return list;
         }
@@ -173,7 +171,6 @@ namespace DoAnOOP
         public List<qlyBook> searchBook(string b)
         {
             db = new database_DoAnDataContext();
-            Librarian x = new Librarian();
             var list = (from m in db.qlyBooks where b.CompareTo(m.Author) == 0 select m).ToList();
             return list;
         }
