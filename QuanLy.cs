@@ -78,11 +78,55 @@ namespace DoAnOOP
             Close();
         }
 
+        private void search1(string a, string b)
+        {
+            var list = mem.searchBook(a, b);
+            if (list.Count > 0)
+            {
+                dataGridView1.DataSource = list;
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay trong thu vien.");
+                return;
+            }
+            label1.Visible = true;
+        }
+        private void search1(int a)
+        {
+            var list = mem.searchBook(a);
+            if (list.Count > 0)
+            {
+                dataGridView1.DataSource = list;
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay trong thu vien.");
+                return;
+            }
+
+        }
+        private void search1(string a)
+        {
+            var list = mem.searchBook(a);
+            if (list.Count > 0)
+            {
+                dataGridView1.DataSource = list;
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay trong thu vien.");
+                return;
+            }
+        }
+
         private void btn_search_librarian_Click(object sender, EventArgs e)
         {
-            Form3 a = new Form3();
-            a.truyen = new Form3.truyenDuLieu(search);
-            a.ShowDialog();
+            Search a = new Search();
+            a.chuyen1 = new Search.truyen1(search1);
+            a.chuyen2 = new Search.truyen2(search1);
+            a.chuyen3 = new Search.truyen3(search1);
+            a.Show();
         }
 
         private void btn_viewMember_Click(object sender, EventArgs e)

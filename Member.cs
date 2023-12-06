@@ -161,7 +161,22 @@ namespace DoAnOOP
             {
                 MessageBox.Show("Moi nhap ma sach la mot so nguyen.");
             }
-            var list = (from m in db.qlyBooks where m.BookCode == temp && m.BookName.CompareTo(b) == 0 select m).ToList();
+            var list = (from m in db.qlyBooks where m.BookCode == temp && b.CompareTo(m.Author) == 0 select m).ToList();
+            return list;
+        }
+        public List<qlyBook> searchBook(int temp)
+        {
+            db = new database_DoAnDataContext();
+            Librarian x = new Librarian();
+            var list = (from m in db.qlyBooks where m.BookCode == temp select m).ToList();
+            return list;
+        }
+
+        public List<qlyBook> searchBook(string b)
+        {
+            db = new database_DoAnDataContext();
+            Librarian x = new Librarian();
+            var list = (from m in db.qlyBooks where b.CompareTo(m.Author) == 0 select m).ToList();
             return list;
         }
     }
